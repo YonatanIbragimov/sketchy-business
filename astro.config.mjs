@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 
 // Static site: Vercel serves dist/ as plain files, no server needed.
 export default defineConfig({
-  site: "https://sketchy-business.vercel.app",
+  site: "https://sketchy-business-khaki.vercel.app",
   trailingSlash: "ignore",
   build: { format: "directory" },
   markdown: { smartypants: true },
