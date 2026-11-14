@@ -1,0 +1,219 @@
+---
+import Base from "../layouts/Base.astro";
+import Sprite from "../components/Sprite.astro";
+import DownloadButton from "../components/DownloadButton.astro";
+import { chapters } from "../data/chapters";
+import { cast } from "../data/cast";
+import { narratorLines } from "../data/narrator";
+
+const lineup = ["noggin", "dot", "pink", "scrunch", "reginald", "blotto", "compass", "blanc", "smudge"]
+  .map((id) => cast.find((c) => c.id === id)!)
+  .filter(Boolean);
+const gallery = chapters.slice(0, 6);
+---
+<Base>
+  <!-- HERO -->
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="kicker scrawl">a hand-drawn platformer</p>
+      <h1>Sketchy <span>Business</span></h1>
+      <p class="lede">
+        A doodle with an <span class="hl">enormous head</span>, a very rude narrator, and a pompous royal eraser who
+        stole the Last Pencil. Ten chapters across one very long sketchbook, for one player or two.
+      </p>
+      <div class="cta">
+        <DownloadButton big />
+        <a class="btn ghost" href="/wiki">Read the wiki</a>
+      </div>
+      <p class="free">Free. Windows 10 &amp; 11. Keyboard or controller.</p>
+    </div>
+
+    <div class="hero-stage" aria-hidden="true">
+      <div class="smudge-float"><Sprite name="smudge" height={170} /></div>
+      <div class="noggin"><Sprite name="noggin_idle" height={210} /></div>
+      <div class="ground boil"></div>
+    </div>
+
+    <figure class="narrator sketch tilt-l" aria-live="polite">
+      <figcaption>NARRATOR</figcaption>
+      <blockquote id="narr">{narratorLines[0]}</blockquote>
+    </figure>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="wrap block">
+    <h2>One very long page</h2>
+    <p class="sub">Every chapter is drawn on its own kind of paper, from lined notebook to blueprint to a coffee-stained desk.</p>
+    <div class="gallery">
+      {gallery.map((c, i) => (
+        <a class:list={["shot", "tape", i % 2 ? "r" : "l"]} href={`/wiki/chapters#ch${c.n}`}>
+          <img src={`/shots/${c.shot}-sm.webp`} srcset={`/shots/${c.shot}-sm.webp 640w, /shots/${c.shot}.webp 1280w`} sizes="(max-width: 700px) 92vw, 360px" alt={`Chapter ${c.n}: ${c.title}, ${c.place}`} loading="lazy" width="640" height="360" />
+          <figcaption>Ch. {c.n}: {c.title}</figcaption>
+        </a>
+      ))}
+    </div>
+    <p class="more"><a href="/wiki/chapters">All ten chapters →</a></p>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="wrap block">
+    <h2>What's in the sketchbook</h2>
+    <div class="features">
+      <article class="sketch tilt-r">
+        <h3>Drawn by hand</h3>
+        <p>Every character and every world is pencil on paper. The lines even wobble, about nine times a second, like a flipbook that can't sit still.</p>
+      </article>
+      <article class="sketch tilt-l">
+        <h3>A narrator with opinions</h3>
+        <p>He comments on every jump, every fall and every life choice. He is not on your side. Probably.</p>
+      </article>
+      <article class="sketch">
+        <h3>40 levels, 69 puzzle rooms</h3>
+        <p>Rooms that need thinking, not jumping: crate steps, combination locks, balance scales, mirror pages, and a shell game you will lose.</p>
+      </article>
+      <article class="sketch tilt-l">
+        <h3>Bosses with grudges</h3>
+        <p>A bouncer eraser, a crumpled-up draft, a knight who is also a ruler, a puddle that says "Blorp", and Lord Smudge himself.</p>
+      </article>
+      <article class="sketch tilt-r">
+        <h3>Move like a doodle</h3>
+        <p>Wall jumps, ledge grabs, double jumps, dashes, slides, rolls and a dodge. Plus zip-lines, swing rings and paper planes.</p>
+      </article>
+      <article class="sketch">
+        <h3>Saves at every flag</h3>
+        <p>Every checkpoint saves. Quit whenever you like; Continue puts you right back with the shavings you'd found.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CO-OP -->
+  <section class="wrap block coop">
+    <div class="coop-pic shot tape">
+      <img src="/shots/coop-sm.webp" srcset="/shots/coop-sm.webp 640w, /shots/coop.webp 1280w" sizes="(max-width: 800px) 92vw, 560px" alt="Noggin and Penny playing co-op in Inkwell Village" loading="lazy" width="640" height="360" />
+    </div>
+    <div class="coop-copy">
+      <h2>Bring a friend. <span class="pen">In pen.</span></h2>
+      <p>
+        Plug in a second controller and a friend plays as <strong>Penny</strong>, a ballpoint pen from across the
+        gutter who never stops talking. Ink can't be erased, which Lord Smudge finds <em>extremely</em> annoying.
+      </p>
+      <p>
+        Stand on each other's heads for a <strong>team jump</strong>, hit a boss while it's busy with your friend for a
+        <strong>blindside</strong>, and solve rooms built for two.
+      </p>
+      <a href="/wiki/co-op">How co-op works →</a>
+    </div>
+  </section>
+
+  <!-- CAST -->
+  <section class="wrap block">
+    <h2>The cast</h2>
+    <p class="sub">Every one of them drawn by hand, frame by frame.</p>
+    <ul class="lineup">
+      {lineup.map((m) => (
+        <li>
+          <a href={`/wiki/characters#${m.id}`}>
+            <span class="pose"><Sprite name={m.sprite} height={120} /></span>
+            <span class="name">{m.name}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="more"><a href="/wiki/characters">Meet everyone →</a></p>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="wrap block final">
+    <div class="sketch final-box">
+      <h2>Go on then. Download it.</h2>
+      <p class="sub">"The next part is a little harder. By which I mean I'm fairly sure you'll fall." (The Narrator)</p>
+      <DownloadButton big />
+      <p class="note">
+        Windows may show <strong>"Windows protected your PC"</strong> the first time, because the game is new and
+        made by one person. Click <strong>More info</strong>, then <strong>Run anyway</strong>.
+        <a href="/download">Full install help</a>.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<script is:inline define:vars={{ lines: narratorLines }}>
+  // The narrator box types out a new line every few seconds, like in the game.
+  (() => {
+    const el = document.getElementById("narr");
+    if (!el || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let i = 0;
+    const type = (text) => {
+      let k = 0;
+      el.textContent = "";
+      const t = setInterval(() => {
+        k += 1;
+        el.textContent = text.slice(0, k);
+        if (k >= text.length) clearInterval(t);
+      }, 28);
+    };
+    setInterval(() => { i = (i + 1) % lines.length; type(lines[i]); }, 6500);
+  })();
+</script>
+
+<style>
+  .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px 32px; align-items: center; padding-top: 48px; padding-bottom: 24px; }
+  .kicker { margin: 0; font-size: 1.5rem; transform: rotate(-2deg); display: inline-block; }
+  h1 { margin: 0 0 12px; }
+  h1 span { color: var(--red); display: inline-block; transform: rotate(-1.5deg); }
+  .lede { font-size: 1.22rem; line-height: 1.7; max-width: 34em; }
+  .cta { display: flex; flex-wrap: wrap; gap: 14px 18px; align-items: center; margin: 8px 0 12px; }
+  .free { color: var(--ink-soft); font-size: .95rem; margin: 0; }
+
+  .hero-stage { position: relative; min-height: 340px; }
+  .noggin { position: absolute; left: 6%; bottom: 22px; }
+  .smudge-float { position: absolute; right: 2%; top: 0; animation: float 4.5s ease-in-out infinite; }
+  .ground { position: absolute; left: 0; right: 0; bottom: 18px; height: 3px; background: var(--ink); border-radius: 3px; filter: url(#boil-a); }
+  @keyframes float { 0%, 100% { transform: translate(0, 0) rotate(-1deg); } 50% { transform: translate(-14px, 14px) rotate(1.5deg); } }
+  @media (prefers-reduced-motion: reduce) { .smudge-float { animation: none; } }
+
+  .narrator { grid-column: 1 / -1; margin: 8px 0 0; max-width: 760px; justify-self: center; width: 100%; background: #fffdf6; }
+  .narrator figcaption { position: absolute; top: -14px; left: 18px; background: #fffdf6; color: var(--red); font-family: var(--font-hand); font-size: .95rem; padding: 0 8px; letter-spacing: .08em; border: 2px solid var(--red); border-radius: 4px; line-height: 1.4; }
+  .narrator blockquote { margin: 0; font-size: 1.2rem; line-height: 1.6; min-height: 3.2em; }
+
+  .block { margin-top: 88px; }
+  .sub { color: var(--ink-soft); max-width: 40em; }
+  .more { font-family: var(--font-hand); font-size: 1.35rem; margin-top: 20px; }
+
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px 26px; margin-top: 30px; }
+  .gallery .shot { color: inherit; text-decoration: none; transition: transform .15s ease; }
+  .gallery .shot.l { transform: rotate(-1.2deg); }
+  .gallery .shot.r { transform: rotate(1deg); }
+  .gallery .shot:hover { transform: rotate(0) scale(1.03); z-index: 1; }
+
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 26px; }
+  .features p { margin: 0; line-height: 1.6; font-size: 1.02rem; }
+
+  .coop { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .coop-pic { transform: rotate(-1.5deg); }
+  .pen { color: var(--blue); }
+  .coop-copy p { line-height: 1.7; }
+  .coop-copy a { font-family: var(--font-hand); font-size: 1.35rem; }
+
+  .lineup { list-style: none; padding: 0; margin: 24px 0 0; display: flex; flex-wrap: wrap; gap: 22px 30px; justify-content: center; align-items: flex-end; }
+  .lineup a { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--ink); text-decoration: none; }
+  .lineup .pose { height: 124px; display: flex; align-items: flex-end; transition: transform .15s; }
+  .lineup a:hover .pose { transform: translateY(-6px) rotate(-3deg); }
+  .lineup .name { font-family: var(--font-hand); font-size: 1.2rem; }
+
+  .final-box { text-align: center; padding: 40px 24px; background: #fffdf6; }
+  .final-box .sub { margin: 0 auto 26px; }
+  .note { font-size: .95rem; line-height: 1.6; color: var(--ink-soft); max-width: 36em; margin: 24px auto 0; }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; padding-top: 28px; }
+    .hero-stage { min-height: 260px; order: -1; }
+    .gallery, .features { grid-template-columns: repeat(2, 1fr); }
+    .coop { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .gallery, .features { grid-template-columns: 1fr; }
+    .lineup { justify-content: center; gap: 18px 22px; }
+    .dl.big { font-size: 1.5rem; }
+  }
+</style>

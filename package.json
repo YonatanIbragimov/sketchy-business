@@ -1,0 +1,17 @@
+{
+  "name": "sketchy-business-site",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "art": "python scripts/build_art.py",
+    "shots": "python scripts/pick_shots.py",
+    "release": "node scripts/release.mjs"
+  },
+  "dependencies": {
+    "astro": "^5.7.0"
+  }
+}

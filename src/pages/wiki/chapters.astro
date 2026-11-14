@@ -1,0 +1,55 @@
+---
+import Wiki from "../../layouts/Wiki.astro";
+import Sprite from "../../components/Sprite.astro";
+import { chapters } from "../../data/chapters";
+import { byId } from "../../data/cast";
+---
+<Wiki title="Chapters" description="All ten chapters of Sketchy Business, from Margin Meadows to the Forgotten Margins.">
+  <p>
+    Ten chapters, four levels each. Every chapter is drawn on its own kind of paper. Levels 1 to 3 end when you walk
+    off the right-hand edge of the page; level 4 ends with a boss. Later chapters keep their story behind a spoiler.
+  </p>
+
+  <ol class="chapters">
+    {chapters.map((c) => {
+      const boss = byId[c.boss];
+      return (
+        <li id={`ch${c.n}`}>
+          <figure class="shot tape">
+            <img src={`/shots/${c.shot}-sm.webp`} srcset={`/shots/${c.shot}-sm.webp 640w, /shots/${c.shot}.webp 1280w`} sizes="(max-width: 800px) 90vw, 400px" alt={`${c.place}, chapter ${c.n}`} loading="lazy" width="640" height="360" />
+          </figure>
+          <div>
+            <p class="num scrawl">Chapter {c.n}</p>
+            <h2>{c.title}</h2>
+            <p class="where">{c.place} · <em>{c.paper}</em></p>
+            {c.late ? (
+              <details class="spoiler"><summary>What happens</summary><p>{c.blurb}</p></details>
+            ) : <p>{c.blurb}</p>}
+            <p class="lv"><strong>Levels:</strong> {c.levels.map((l, i) => <span>{c.n}-{i + 1} {l}{i < 3 ? " · " : ""}</span>)}</p>
+            <p class="lv"><strong>New here:</strong> {c.new.join(" · ")}</p>
+            {boss && (
+              <p class="boss">
+                <Sprite name={boss.sprite} height={54} />
+                <span>Boss: <a href={`/wiki/bosses#${boss.id}`}>{boss.name}</a></span>
+              </p>
+            )}
+          </div>
+        </li>
+      );
+    })}
+  </ol>
+</Wiki>
+
+<style>
+  .chapters { list-style: none; padding: 0 !important; }
+  .chapters > li { display: grid; grid-template-columns: 380px 1fr; gap: 30px; align-items: start; margin-bottom: 64px; scroll-margin-top: 90px; }
+  .chapters > li:nth-child(even) figure { transform: rotate(1deg); }
+  .chapters > li:nth-child(odd) figure { transform: rotate(-1deg); }
+  figure { margin: 0; }
+  .num { margin: 0; font-size: 1.3rem; }
+  h2 { margin: 0 0 4px !important; }
+  .where { color: var(--ink-soft); margin-bottom: 12px; }
+  .lv { font-size: .95rem; line-height: 1.55; margin-bottom: 8px; }
+  .boss { display: flex; align-items: flex-end; gap: 10px; margin: 10px 0 0; font-family: var(--font-hand); font-size: 1.25rem; }
+  @media (max-width: 860px) { .chapters > li { grid-template-columns: 1fr; gap: 14px; } }
+</style>

@@ -1,0 +1,140 @@
+/* Sketchy Business — pencil on notebook paper, like chapter 1. */
+:root {
+  --paper: #faf7ee;
+  --paper-2: #f3eedf;
+  --rule: #b2c8e2;
+  --margin: #e07878;
+  --ink: #34373d;
+  --ink-soft: #5d6168;
+  --ink-faint: #8d9097;
+  --red: #cd463c;      /* Noggin's neckerchief */
+  --blue: #2f63b0;     /* Penny's ink */
+  --pink: #e48aa0;     /* Lord Smudge */
+  --gold: #c99a2e;
+  --line-h: 32px;      /* the notebook ruling; text sits on it */
+  --font-hand: "Gochi Hand", "Segoe Print", "Comic Sans MS", cursive;
+  --font-body: "Kalam", "Segoe Print", "Comic Sans MS", cursive;
+  --maxw: 1120px;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 19px;
+  line-height: var(--line-h);
+  background-color: var(--paper);
+  /* lined paper + the red margin line + paper tooth */
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .28 0 0 0 0 .22 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),
+    linear-gradient(90deg, transparent 0 calc(min(9vw, 96px) - 1px), var(--margin) calc(min(9vw, 96px) - 1px) min(9vw, 96px), transparent min(9vw, 96px)),
+    repeating-linear-gradient(180deg, transparent 0 calc(var(--line-h) - 1px), var(--rule) calc(var(--line-h) - 1px) var(--line-h));
+  background-attachment: scroll;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--blue); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { color: var(--red); }
+
+h1, h2, h3, h4 { font-family: var(--font-hand); font-weight: 400; line-height: 1.1; margin: 0 0 .4em; letter-spacing: .01em; }
+h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); }
+h2 { font-size: clamp(2rem, 4.5vw, 2.9rem); }
+h3 { font-size: 1.65rem; }
+p { margin: 0 0 var(--line-h); }
+
+.wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 16px 0 max(16px, calc(min(9vw, 96px) + 18px)); }
+
+/* ---- the hand-drawn box: a wobbly pencil outline that "boils" like the game's line boil ---- */
+.sketch {
+  position: relative;
+  background: var(--paper);
+  padding: 22px 24px;
+}
+.sketch::before {
+  content: "";
+  position: absolute; inset: 0;
+  border: 2.5px solid var(--ink);
+  border-radius: 6px 10px 5px 12px / 12px 5px 10px 6px;
+  filter: url(#boil-a);
+  pointer-events: none;
+  animation: boil .33s steps(1) infinite;
+}
+.sketch.tilt-l { transform: rotate(-.6deg); }
+.sketch.tilt-r { transform: rotate(.5deg); }
+@keyframes boil {
+  0%   { filter: url(#boil-a); }
+  33%  { filter: url(#boil-b); }
+  66%  { filter: url(#boil-c); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sketch::before, .boil { animation: none !important; }
+}
+.boil { animation: boil .33s steps(1) infinite; }
+
+/* tape on the corner of a photo */
+.tape { position: relative; }
+.tape::after {
+  content: ""; position: absolute; top: -12px; left: 50%; width: 92px; height: 26px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: rgba(236, 226, 190, .78);
+  box-shadow: 0 1px 2px rgba(0,0,0,.08);
+}
+
+/* screenshots pinned to the page */
+.shot {
+  background: #fff; padding: 8px 8px 10px;
+  box-shadow: 0 2px 0 rgba(52,55,61,.12), 0 8px 22px rgba(52,55,61,.16);
+}
+.shot img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.shot figcaption { font-family: var(--font-hand); font-size: 1.15rem; line-height: 1.3; margin-top: 8px; color: var(--ink-soft); }
+
+/* buttons drawn in marker */
+.btn {
+  display: inline-flex; align-items: center; gap: .55em;
+  font-family: var(--font-hand); font-size: 1.5rem; line-height: 1;
+  color: var(--paper); background: var(--ink);
+  padding: .62em 1.1em .55em; border-radius: 14px 6px 16px 8px / 8px 16px 6px 14px;
+  text-decoration: none; border: 0; cursor: pointer;
+  box-shadow: 3px 4px 0 var(--red);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.btn:hover { color: var(--paper); transform: translate(-1px, -2px) rotate(-1deg); box-shadow: 5px 6px 0 var(--red); }
+.btn:active { transform: translate(2px, 3px); box-shadow: 1px 1px 0 var(--red); }
+.btn.ghost { background: transparent; color: var(--ink); box-shadow: none; outline: 2.5px solid var(--ink); outline-offset: -2.5px; }
+.btn.ghost:hover { background: var(--paper-2); }
+.btn small { font-family: var(--font-body); font-size: .85rem; opacity: .8; }
+
+:focus-visible { outline: 3px dashed var(--blue); outline-offset: 3px; }
+
+/* highlighter + scribbles */
+.hl { background: linear-gradient(104deg, transparent .3em, rgba(255, 226, 92, .7) .4em, rgba(255, 226, 92, .55) 96%, transparent); padding: 0 .2em; }
+.scrawl { font-family: var(--font-hand); color: var(--red); }
+.kbd, kbd {
+  font-family: var(--font-hand); font-size: 1.05em; display: inline-block; min-width: 1.6em; text-align: center;
+  padding: 0 .4em; line-height: 1.5; border: 2px solid var(--ink); border-radius: 6px 4px 7px 5px; background: #fff;
+  box-shadow: 0 2px 0 var(--ink);
+}
+
+/* spoilers: crossed-out pencil until you click */
+details.spoiler { margin: 0 0 var(--line-h); }
+details.spoiler > summary {
+  cursor: pointer; font-family: var(--font-hand); font-size: 1.3rem; color: var(--red); list-style: none;
+}
+details.spoiler > summary::-webkit-details-marker { display: none; }
+details.spoiler > summary::before { content: "✎ "; }
+details.spoiler:not([open]) > summary::after { content: " (spoilers, click to reveal)"; color: var(--ink-faint); font-size: 1rem; }
+
+/* tables in the wiki */
+table { border-collapse: collapse; width: 100%; margin: 0 0 var(--line-h); font-size: .95rem; line-height: 1.45; }
+th, td { text-align: left; padding: 7px 10px; border-bottom: 1.5px solid rgba(52,55,61,.35); vertical-align: top; }
+th { font-family: var(--font-hand); font-size: 1.15rem; font-weight: 400; border-bottom: 2.5px solid var(--ink); }
+.table-scroll { overflow-x: auto; }
+
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

@@ -1,0 +1,68 @@
+---
+import Wiki from "../../layouts/Wiki.astro";
+import Sprite from "../../components/Sprite.astro";
+import { cast, type Role } from "../../data/cast";
+
+const groups: { role: Role; title: string; note?: string }[] = [
+  { role: "hero", title: "Heroes" },
+  { role: "villain", title: "Villains (and the narrator)" },
+  { role: "friend", title: "Friends along the way" },
+  { role: "boss", title: "Mini-bosses", note: "Strategy for each one is in the boss guide." },
+  { role: "minion", title: "Smudge's minions" },
+];
+---
+<Wiki title="Characters" description="Noggin, Penny, Lord Smudge, Dot and everyone else in Sketchy Business, drawn by hand.">
+  <p>Everybody in the sketchbook, drawn by hand and animated frame by frame. Spoilers are folded away.</p>
+
+  {groups.map((g) => (
+    <section>
+      <h2>{g.title}</h2>
+      {g.note && <p class="note">{g.note} <a href="/wiki/bosses">Boss guide →</a></p>}
+      <div class:list={["grid", g.role]}>
+        {cast.filter((m) => m.role === g.role).map((m) => (
+          <article class="card sketch" id={m.id}>
+            <div class="pic">
+              {m.sprite ? (
+                m.alt ? (
+                  <>
+                    <span class="a"><Sprite name={m.sprite} height={g.role === "minion" ? 80 : 120} alt={m.name} /></span>
+                    <span class="b"><Sprite name={m.alt} height={g.role === "minion" ? 80 : 120} /></span>
+                  </>
+                ) : <Sprite name={m.sprite} height={g.role === "minion" ? 80 : 120} alt={m.name} />
+              ) : <span class="quote" aria-hidden="true">“ ”</span>}
+            </div>
+            <div class="txt">
+              <h3>{m.name}</h3>
+              {m.chapter && <p class="ch">Chapter {m.chapter}</p>}
+              <p class="tag">{m.tagline}</p>
+              <p>{m.about}</p>
+              {m.tips && <p class="tips">{m.tips}</p>}
+              {m.spoiler && <details class="spoiler"><summary>More</summary><p>{m.spoiler}</p></details>}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  ))}
+</Wiki>
+
+<style>
+  .note { color: var(--ink-soft); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 26px; margin-bottom: 40px; }
+  .grid.minion { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  .card { display: grid; grid-template-columns: 110px 1fr; gap: 16px; align-items: start; scroll-margin-top: 90px; }
+  .minion .card { grid-template-columns: 76px 1fr; }
+  .pic { display: flex; justify-content: center; align-items: flex-end; min-height: 120px; position: relative; overflow: hidden; }
+  .pic .b { display: none; }
+  .card:hover .pic .a { display: none; }
+  .card:hover .pic .b { display: inline; }
+  .quote { font-family: var(--font-hand); font-size: 5rem; color: var(--red); line-height: 1; }
+  h3 { margin: 0; font-size: 1.6rem; }
+  .ch { margin: 0; font-size: .85rem; color: var(--ink-faint); line-height: 1.4; }
+  .tag { font-family: var(--font-hand); font-size: 1.15rem; color: var(--red); margin: 4px 0 6px; line-height: 1.3; }
+  .txt p { font-size: .95rem; line-height: 1.55; margin-bottom: 8px; }
+  .txt .tips { color: var(--ink-soft); font-style: italic; }
+  .txt details.spoiler { margin: 0; }
+  .txt details.spoiler summary { font-size: 1.1rem; }
+  @media (max-width: 420px) { .card { grid-template-columns: 1fr; } .pic { justify-content: flex-start; } }
+</style>

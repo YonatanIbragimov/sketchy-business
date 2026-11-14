@@ -1,0 +1,78 @@
+---
+import Base from "../layouts/Base.astro";
+import DownloadButton from "../components/DownloadButton.astro";
+import Sprite from "../components/Sprite.astro";
+import { release, releasesUrl } from "../data/release";
+---
+<Base title="Download" description={`Download Sketchy Business v${release.version} for Windows 10 and 11. Free.`}>
+  <section class="wrap dl-page">
+    <div class="head">
+      <div>
+        <h1>Download</h1>
+        <p class="lede">Sketchy Business is free. One installer, about {release.sizeMB} MB, and it sets up everything the game needs.</p>
+        <DownloadButton big />
+        <p class="meta">Version {release.version} · released {new Date(release.date + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })} · <a href={releasesUrl}>older versions &amp; changes</a></p>
+      </div>
+      <div class="pose" aria-hidden="true"><Sprite name="noggin_run" height={190} /></div>
+    </div>
+
+    <div class="cols">
+      <section class="sketch tilt-l">
+        <h2>Installing</h2>
+        <ol>
+          <li>Open <strong>SketchyBusiness-Setup.exe</strong> from your Downloads.</li>
+          <li>
+            If Windows says <strong>"Windows protected your PC"</strong>, click <strong>More info</strong>, then
+            <strong>Run anyway</strong>. It shows that for new games from small developers that haven't paid for a
+            code-signing certificate yet.
+          </li>
+          <li>Pick where to install it, and whether you'd like a desktop shortcut.</li>
+          <li>If your PC is missing the Microsoft Visual C++ runtime, the installer adds it for you.</li>
+          <li>Tick <strong>Play Sketchy Business now</strong> and press Finish.</li>
+        </ol>
+        <p>Install it just for you (no admin needed) or for everyone on the PC.</p>
+      </section>
+
+      <section class="sketch tilt-r">
+        <h2>What you need</h2>
+        <table>
+          <tbody>
+            <tr><th scope="row">System</th><td>Windows 10 or 11, 64-bit</td></tr>
+            <tr><th scope="row">Graphics</th><td>Anything with OpenGL 3.3 (most PCs from the last ten years)</td></tr>
+            <tr><th scope="row">Disk</th><td>About 300 MB</td></tr>
+            <tr><th scope="row">Controls</th><td>Keyboard, mouse, or any Xbox-style controller</td></tr>
+            <tr><th scope="row">Co-op</th><td>Two controllers, or one controller + keyboard, or two people on one keyboard</td></tr>
+          </tbody>
+        </table>
+        <p>No Mac or Linux version yet.</p>
+      </section>
+
+      <section class="sketch">
+        <h2>Updating &amp; uninstalling</h2>
+        <p>
+          To update, download the new installer and run it over the old one. Your saves and settings live separately
+          (in <code>%APPDATA%\Graphite\Sketchy Business</code>), so updating or uninstalling never touches them.
+        </p>
+        <p>To uninstall: Windows <strong>Settings → Apps</strong>, find Sketchy Business, Uninstall.</p>
+      </section>
+    </div>
+
+    <p class="help">Stuck? <a href="/wiki/faq">Help &amp; FAQ</a> covers black screens, controllers and saves.</p>
+  </section>
+</Base>
+
+<style>
+  .dl-page { padding-top: 40px; }
+  .head { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; }
+  .lede { font-size: 1.2rem; max-width: 32em; }
+  .meta { color: var(--ink-soft); font-size: .95rem; margin-top: 16px; }
+  .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 56px; }
+  .cols h2 { font-size: 2rem; }
+  .cols ol { padding-left: 1.2em; margin: 0 0 16px; }
+  .cols li { margin-bottom: 8px; line-height: 1.55; }
+  .cols p { line-height: 1.6; margin-bottom: 12px; font-size: 1rem; }
+  code { font-family: Consolas, monospace; font-size: .85em; background: var(--paper-2); padding: 1px 4px; border-radius: 3px; word-break: break-all; }
+  .help { margin-top: 40px; font-family: var(--font-hand); font-size: 1.4rem; }
+  @media (max-width: 960px) { .cols { grid-template-columns: 1fr; } }
+  @media (max-width: 640px) { .head { grid-template-columns: 1fr; } .pose { display: none; } }
+</style>

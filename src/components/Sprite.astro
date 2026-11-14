@@ -1,0 +1,36 @@
+---
+// Plays one of the game's animation strips (made by scripts/build_art.py) with CSS steps().
+import sprites from "../data/sprites.json";
+
+interface Props { name: string; height?: number; alt?: string; flip?: boolean; class?: string; speed?: number }
+const { name, height = 110, alt = "", flip = false, class: cls = "", speed = 1 } = Astro.props;
+const s = (sprites as Record<string, { src: string; frames: number; fps: number; w: number; h: number }>)[name];
+const w = s ? Math.round((s.w * height) / s.h) : height;
+const dur = s ? (s.frames / s.fps / speed).toFixed(3) : "1";
+---
+{s ? (
+  <span
+    class:list={["sprite", cls, { flip }]}
+    role={alt ? "img" : undefined}
+    aria-label={alt || undefined}
+    aria-hidden={alt ? undefined : "true"}
+    style={`--w:${w}px;--h:${height}px;--n:${s.frames};--dur:${dur}s;background-image:url(${s.src});`}
+  ></span>
+) : null}
+
+<style>
+  .sprite {
+    display: inline-block;
+    width: var(--w);
+    height: var(--h);
+    background-repeat: no-repeat;
+    background-size: calc(var(--w) * var(--n)) var(--h);
+    animation: play var(--dur) steps(var(--n)) infinite;
+  }
+  .sprite.flip { transform: scaleX(-1); }
+  @keyframes play {
+    from { background-position: 0 0; }
+    to { background-position: calc(var(--w) * var(--n) * -1) 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { .sprite { animation: none; } }
+</style>

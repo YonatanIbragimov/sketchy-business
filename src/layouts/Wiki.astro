@@ -1,0 +1,70 @@
+---
+import Base from "./Base.astro";
+
+interface Props { title: string; description?: string; frontmatter?: { title: string; description?: string } }
+const fm = Astro.props.frontmatter;
+const title = fm?.title ?? Astro.props.title;
+const description = fm?.description ?? Astro.props.description;
+const path = Astro.url.pathname.replace(/\/$/, "");
+
+const pages = [
+  { href: "/wiki", label: "Wiki home" },
+  { href: "/wiki/story", label: "The story" },
+  { href: "/wiki/chapters", label: "Chapters" },
+  { href: "/wiki/characters", label: "Characters" },
+  { href: "/wiki/bosses", label: "Boss guide" },
+  { href: "/wiki/controls", label: "Controls" },
+  { href: "/wiki/moves", label: "Moves" },
+  { href: "/wiki/co-op", label: "Co-op" },
+  { href: "/wiki/puzzles", label: "Puzzle rooms" },
+  { href: "/wiki/tips", label: "Tips & secrets" },
+  { href: "/wiki/faq", label: "Help & FAQ" },
+];
+---
+<Base title={title} description={description}>
+  <div class="wrap wiki">
+    <aside>
+      <details open class="toc">
+        <summary>Wiki pages</summary>
+        <ul>
+          {pages.map((p) => <li><a href={p.href} aria-current={path === p.href ? "page" : undefined}>{p.label}</a></li>)}
+        </ul>
+      </details>
+    </aside>
+    <article class="page">
+      <h1>{title}</h1>
+      <slot />
+    </article>
+  </div>
+</Base>
+
+<style>
+  .wiki { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 40px; padding-top: 40px; }
+  aside { position: relative; }
+  .toc { position: sticky; top: 90px; }
+  .toc summary { font-family: var(--font-hand); font-size: 1.4rem; cursor: default; list-style: none; pointer-events: none; }
+  .toc summary::-webkit-details-marker { display: none; }
+  .toc ul { list-style: none; padding: 0; margin: 6px 0 0; }
+  .toc a { display: block; color: var(--ink); text-decoration: none; padding: 0 0 0 10px; border-left: 3px solid transparent; line-height: var(--line-h); }
+  .toc a:hover { color: var(--red); }
+  .toc a[aria-current="page"] { border-left-color: var(--red); color: var(--red); }
+  .page { min-width: 0; }
+  .page :global(h2) { margin-top: 1.4em; }
+  .page :global(h3) { margin-top: 1em; }
+  .page :global(ul), .page :global(ol) { margin: 0 0 var(--line-h); padding-left: 1.3em; }
+  .page :global(li) { margin: 0; }
+  .page :global(blockquote) { margin: 0 0 var(--line-h); padding-left: 16px; border-left: 3px solid var(--red); font-style: italic; }
+  .page > :global(p:first-of-type) { font-size: 1.15rem; }
+  @media (max-width: 800px) {
+    .wiki { grid-template-columns: 1fr; gap: 8px; padding-top: 20px; }
+    .toc { position: static; }
+    .toc summary { pointer-events: auto; cursor: pointer; }
+    .toc summary::after { content: " ▾"; }
+    .toc ul { columns: 2; }
+  }
+</style>
+
+<script is:inline>
+  // On phones the page list starts folded so the article is first on screen.
+  if (matchMedia("(max-width: 800px)").matches) document.querySelector(".toc")?.removeAttribute("open");
+</script>

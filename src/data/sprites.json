@@ -1,0 +1,296 @@
+{
+ "smudge": {
+  "src": "/art/smudge.webp",
+  "frames": 16,
+  "fps": 8.333,
+  "w": 190,
+  "h": 220
+ },
+ "smudge_throw": {
+  "src": "/art/smudge_throw.webp",
+  "frames": 12,
+  "fps": 8.0,
+  "w": 198,
+  "h": 220
+ },
+ "dot": {
+  "src": "/art/dot.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 209,
+  "h": 220
+ },
+ "pink": {
+  "src": "/art/pink.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 260,
+  "h": 220
+ },
+ "scrunch": {
+  "src": "/art/scrunch.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 189,
+  "h": 220
+ },
+ "reginald": {
+  "src": "/art/reginald.webp",
+  "frames": 2,
+  "fps": 3.0,
+  "w": 223,
+  "h": 220
+ },
+ "blotto": {
+  "src": "/art/blotto.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 258,
+  "h": 220
+ },
+ "compass": {
+  "src": "/art/compass.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 156,
+  "h": 220
+ },
+ "blanc": {
+  "src": "/art/blanc.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 227,
+  "h": 220
+ },
+ "binderclip": {
+  "src": "/art/binderclip.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 194,
+  "h": 220
+ },
+ "dogear": {
+  "src": "/art/dogear.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 348,
+  "h": 220
+ },
+ "protractor": {
+  "src": "/art/protractor.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 317,
+  "h": 220
+ },
+ "teabag": {
+  "src": "/art/teabag.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 307,
+  "h": 220
+ },
+ "mayor": {
+  "src": "/art/mayor.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 231,
+  "h": 220
+ },
+ "gearsley": {
+  "src": "/art/gearsley.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 229,
+  "h": 220
+ },
+ "margin": {
+  "src": "/art/margin.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 183,
+  "h": 220
+ },
+ "nub": {
+  "src": "/art/nub.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 212,
+  "h": 220
+ },
+ "springclip": {
+  "src": "/art/springclip.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 138,
+  "h": 220
+ },
+ "tack": {
+  "src": "/art/tack.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 173,
+  "h": 220
+ },
+ "smudgeling": {
+  "src": "/art/smudgeling.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 249,
+  "h": 220
+ },
+ "snips": {
+  "src": "/art/snips.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 289,
+  "h": 220
+ },
+ "folk1": {
+  "src": "/art/folk1.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 153,
+  "h": 220
+ },
+ "folk2": {
+  "src": "/art/folk2.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 155,
+  "h": 220
+ },
+ "folk3": {
+  "src": "/art/folk3.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 151,
+  "h": 220
+ },
+ "pink_walk": {
+  "src": "/art/pink_walk.webp",
+  "frames": 8,
+  "fps": 9.0,
+  "w": 255,
+  "h": 220
+ },
+ "scrunch_walk": {
+  "src": "/art/scrunch_walk.webp",
+  "frames": 16,
+  "fps": 11.76,
+  "w": 163,
+  "h": 220
+ },
+ "reginald_walk": {
+  "src": "/art/reginald_walk.webp",
+  "frames": 8,
+  "fps": 10.0,
+  "w": 209,
+  "h": 220
+ },
+ "reginald_attack": {
+  "src": "/art/reginald_attack.webp",
+  "frames": 4,
+  "fps": 8.0,
+  "w": 284,
+  "h": 220
+ },
+ "blotto_walk": {
+  "src": "/art/blotto_walk.webp",
+  "frames": 16,
+  "fps": 10.0,
+  "w": 276,
+  "h": 220
+ },
+ "blanc_walk": {
+  "src": "/art/blanc_walk.webp",
+  "frames": 16,
+  "fps": 10.0,
+  "w": 237,
+  "h": 220
+ },
+ "dot_walk": {
+  "src": "/art/dot_walk.webp",
+  "frames": 16,
+  "fps": 12.0,
+  "w": 186,
+  "h": 220
+ },
+ "compass_walk": {
+  "src": "/art/compass_walk.webp",
+  "frames": 16,
+  "fps": 10.0,
+  "w": 161,
+  "h": 220
+ },
+ "nub_walk": {
+  "src": "/art/nub_walk.webp",
+  "frames": 16,
+  "fps": 10.0,
+  "w": 211,
+  "h": 220
+ },
+ "gearsley_walk": {
+  "src": "/art/gearsley_walk.webp",
+  "frames": 16,
+  "fps": 10.0,
+  "w": 221,
+  "h": 220
+ },
+ "margin_walk": {
+  "src": "/art/margin_walk.webp",
+  "frames": 16,
+  "fps": 8.0,
+  "w": 150,
+  "h": 220
+ },
+ "mayor_walk": {
+  "src": "/art/mayor_walk.webp",
+  "frames": 16,
+  "fps": 10.0,
+  "w": 198,
+  "h": 220
+ },
+ "noggin_idle": {
+  "src": "/art/noggin_idle.webp",
+  "frames": 16,
+  "fps": 8,
+  "w": 126,
+  "h": 220
+ },
+ "noggin_run": {
+  "src": "/art/noggin_run.webp",
+  "frames": 8,
+  "fps": 12,
+  "w": 142,
+  "h": 220
+ },
+ "noggin_jump": {
+  "src": "/art/noggin_jump.webp",
+  "frames": 8,
+  "fps": 12,
+  "w": 217,
+  "h": 220
+ },
+ "noggin_slash": {
+  "src": "/art/noggin_slash.webp",
+  "frames": 8,
+  "fps": 12,
+  "w": 160,
+  "h": 220
+ },
+ "noggin_still": {
+  "src": "/art/noggin.webp",
+  "frames": 1,
+  "fps": 1,
+  "w": 588,
+  "h": 640
+ },
+ "penny_still": {
+  "src": "/art/penny.webp",
+  "frames": 1,
+  "fps": 1,
+  "w": 588,
+  "h": 640
+ }
+}

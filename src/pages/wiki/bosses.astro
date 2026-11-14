@@ -1,0 +1,104 @@
+---
+import Wiki from "../../layouts/Wiki.astro";
+import Sprite from "../../components/Sprite.astro";
+import { byId } from "../../data/cast";
+
+// How each fight actually plays (from the game's MiniBosses.cpp and Boss.cpp).
+const fights: { id: string; name?: string; sprite?: string; ch: number; how: string[]; spoiler?: boolean }[] = [
+  { id: "pink", ch: 1, how: [
+    "A kneaded-eraser bouncer. He paws the ground, then charges.",
+    "Get out of the way and let him run into the gate. He gets stuck.",
+    "While he's stuck and dizzy, jump on his head. You don't have the pencil yet, so stomping is the way.",
+  ] },
+  { id: "scrunch", ch: 2, how: [
+    "He rolls at you, then leaps.",
+    "When he lands he goes flat for a moment. Stomp the flat sheet.",
+  ] },
+  { id: "binderclip", ch: 3, how: [
+    "Fights like Big Pink: watch for the wind-up, sidestep the charge, then stomp while it's stuck.",
+  ] },
+  { id: "reginald", ch: 4, how: [
+    "Lance thrusts: jump over the high ones, slide under the low ones. Or dodge (roll with no direction held) and the thrust goes straight through you.",
+    "He vaults over you and sometimes gets stuck when he lands. That's your opening.",
+  ] },
+  { id: "dogear", ch: 5, how: [
+    "Fights like Scrunch, but from the air: dodge the dive, then hit him while he's down.",
+  ] },
+  { id: "blotto", ch: 6, how: [
+    "Hides as a puddle, rises up to spit ink, then erupts underneath you.",
+    "Keep moving when the puddle goes still. Hit it while it's up and spitting.",
+    "In co-op it goes for Penny. Blindside it while it's busy with her.",
+  ] },
+  { id: "staple", name: "Sergeant Staple", ch: 6, how: [
+    "Staple volleys: keep jumping and don't stand still.",
+    "He charges the wall and stuns himself. Hit him then.",
+    "When he leaps, jump the shockwaves as he lands.",
+  ], spoiler: true },
+  { id: "protractor", ch: 7, how: [
+    "Fights like Sir Reginald: read the thrust, jump or slide, punish the landing.",
+  ] },
+  { id: "compass", ch: 8, how: [
+    "Sweeps its pencil leg over its head and slams it down.",
+    "When the leg sticks in the floor, it's open: get in and swing.",
+  ] },
+  { id: "puncher", name: "The Puncher", ch: 8, how: [
+    "Hovers and tracks you, then slams down. When it's stuck in the floor, it's vulnerable.",
+    "Jump the shockwaves, and watch the paper-dot rain from above.",
+  ], spoiler: true },
+  { id: "teabag", ch: 9, how: [
+    "Fights like Blotto: it hides, rises and erupts. Keep moving.",
+  ] },
+  { id: "blanc", ch: 10, how: [
+    "Lobs blobs of correction fluid that leave puddles on the floor. Don't stand in them.",
+    "She paints a dash across the arena. Jump it.",
+    "In co-op she goes after Penny first.",
+  ] },
+  { id: "smudge", ch: 10, how: [
+    "Struts about and throws eraser crumbs.",
+    "Dashes across the arena. Get out of the way and he hits the wall and goes dizzy. That's your moment.",
+    "Summons minions: clear them quickly, they add up.",
+  ], spoiler: true },
+];
+---
+<Wiki title="Boss guide" description="How to beat every boss in Sketchy Business: Big Pink, Scrunch, Sir Reginald, Blotto, the Compass, Madame Blanc and more.">
+  <p>
+    Every chapter ends in a fight. Walk into the arena and the gates lock behind you. If you fall, the fight restarts
+    from the top, so learn the pattern. Each boss <strong>telegraphs</strong> its big move: a wind-up, a shake or a
+    pause. That's your cue.
+  </p>
+  <ul>
+    <li><strong>Chapters 1 to 3:</strong> Noggin doesn't have the Last Pencil yet. Headbutts only hurt a boss while it's stunned, so these are stomping fights.</li>
+    <li><strong>From chapter 4:</strong> swing the pencil (<kbd>J</kbd> / <kbd>C</kbd> / left-click / controller <kbd>X</kbd>).</li>
+    <li><strong>Co-op:</strong> bosses have half as much health again and go after one of you at a time (marked <strong>!</strong>). Hit one while it's busy with the other for a <strong>blindside</strong>: double damage, and it turns on you.</li>
+  </ul>
+
+  {fights.map((f) => {
+    const m = byId[f.id];
+    const name = f.name ?? m?.name ?? f.id;
+    const body = (
+      <ol>{f.how.map((h) => <li>{h}</li>)}</ol>
+    );
+    return (
+      <section class="fight" id={f.id}>
+        <div class="pic">{m?.sprite ? <Sprite name={m.sprite} height={110} alt={name} /> : <span class="q scrawl">?</span>}</div>
+        <div>
+          <p class="ch">Chapter {f.ch}</p>
+          <h2>{name}</h2>
+          {m?.tagline && <p class="tag">{m.tagline}</p>}
+          {f.spoiler ? <details class="spoiler"><summary>How to beat {name}</summary>{body}</details> : body}
+        </div>
+      </section>
+    );
+  })}
+</Wiki>
+
+<style>
+  .fight { display: grid; grid-template-columns: 130px 1fr; gap: 20px; align-items: start; margin-top: 40px; scroll-margin-top: 90px; }
+  .fight h2 { margin: 0 0 2px !important; font-size: 2.1rem; }
+  .pic { display: flex; justify-content: center; }
+  .q { font-size: 5rem; line-height: 1; }
+  .ch { margin: 0; color: var(--ink-faint); font-size: .9rem; }
+  .tag { font-family: var(--font-hand); color: var(--red); font-size: 1.2rem; margin-bottom: 8px; }
+  .fight li { line-height: 1.6; margin-bottom: 4px !important; }
+  @media (max-width: 560px) { .fight { grid-template-columns: 1fr; } .pic { justify-content: flex-start; } }
+</style>

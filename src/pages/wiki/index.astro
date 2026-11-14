@@ -1,0 +1,40 @@
+---
+import Wiki from "../../layouts/Wiki.astro";
+import Sprite from "../../components/Sprite.astro";
+
+const cards = [
+  { href: "/wiki/story", t: "The story", d: "Noggin, the Last Pencil, and a very tidy villain.", s: "smudge" },
+  { href: "/wiki/chapters", t: "Chapters", d: "All ten chapters and forty levels.", s: "dot" },
+  { href: "/wiki/characters", t: "Characters", d: "Heroes, friends, bosses and minions.", s: "noggin_idle" },
+  { href: "/wiki/bosses", t: "Boss guide", d: "How to beat every mini-boss.", s: "reginald" },
+  { href: "/wiki/controls", t: "Controls", d: "Keyboard, mouse and controller.", s: "nub" },
+  { href: "/wiki/moves", t: "Moves", d: "Wall jumps, dashes, dodges, ledge grabs.", s: "noggin_jump" },
+  { href: "/wiki/co-op", t: "Co-op", d: "Playing with Penny.", s: "penny_still" },
+  { href: "/wiki/puzzles", t: "Puzzle rooms", d: "Every kind of puzzle, and how to think about it.", s: "binderclip" },
+  { href: "/wiki/tips", t: "Tips & secrets", d: "Shavings, assist mode, and the narrator's moods.", s: "springclip" },
+  { href: "/wiki/faq", t: "Help & FAQ", d: "Installing, saves, controllers, black screens.", s: "gearsley" },
+];
+---
+<Wiki title="The Sketchy Business wiki" description="Everything about Sketchy Business: story, chapters, characters, bosses, controls, co-op and puzzles.">
+  <p>Everything worth knowing about the sketchbook. Story spoilers are hidden until you click them.</p>
+  <ul class="cards">
+    {cards.map((c) => (
+      <li>
+        <a class="sketch" href={c.href}>
+          <span class="pic"><Sprite name={c.s} height={78} /></span>
+          <span class="t">{c.t}</span>
+          <span class="d">{c.d}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Wiki>
+
+<style>
+  .cards { list-style: none; padding: 0 !important; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px; }
+  .cards a { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 14px; align-items: center; color: var(--ink); text-decoration: none; padding: 16px 18px; height: 100%; transition: transform .12s; }
+  .cards a:hover { transform: rotate(-1deg) translateY(-2px); }
+  .pic { grid-row: 1 / 3; width: 70px; display: flex; justify-content: center; }
+  .t { font-family: var(--font-hand); font-size: 1.45rem; line-height: 1.2; }
+  .d { font-size: .92rem; line-height: 1.4; color: var(--ink-soft); }
+</style>
