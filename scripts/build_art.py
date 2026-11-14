@@ -37,6 +37,7 @@ SHEETS = {
     "noggin_run": ("noggin/noggin__run__4x2__12fps.png", 4, 2, 12),
     "noggin_jump": ("noggin/noggin__double_jump__4x2__12fps.png", 4, 2, 12),
     "noggin_slash": ("noggin/noggin__slash__4x2__12fps.png", 4, 2, 12),
+    "noggin_crawl": ("noggin/noggin__crawl__4x2__12fps.png", 4, 2, 10),
 }
 STILLS = {
     "noggin": "art_src/noggin/noggin__reference.png",

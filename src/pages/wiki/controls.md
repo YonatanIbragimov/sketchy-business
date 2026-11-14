@@ -18,6 +18,7 @@ Any Xbox-style controller works; button names below are Xbox ones.
 | Dodge (roll with no direction held) | <kbd>X</kbd> / <kbd>L</kbd> | <kbd>B</kbd> |
 | Dash (1.5 s cooldown) | <kbd>Shift</kbd> / right-click | <kbd>RB</kbd> |
 | Slide | Down while running | D-pad down |
+| Crouch / crawl | Hold down, then move | Hold D-pad down, then move |
 | Drop through a plank | Down + Jump | Down + <kbd>A</kbd> |
 | Back to the last flag | <kbd>R</kbd> | <kbd>Back</kbd> |
 | Pause | <kbd>Esc</kbd> / <kbd>P</kbd> | <kbd>Start</kbd> |
