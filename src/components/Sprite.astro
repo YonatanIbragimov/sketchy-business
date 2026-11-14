@@ -2,10 +2,14 @@
 // Plays one of the game's animation strips (made by scripts/build_art.py) with CSS steps().
 import sprites from "../data/sprites.json";
 
-interface Props { name: string; height?: number; alt?: string; flip?: boolean; class?: string; speed?: number }
-const { name, height = 110, alt = "", flip = false, class: cls = "", speed = 1 } = Astro.props;
+// maxWidth: wide characters (a paper plane, a protractor) shrink to fit instead of spilling out of their column.
+interface Props { name: string; height?: number; maxWidth?: number; alt?: string; flip?: boolean; class?: string; speed?: number }
+const { name, height: wantH = 110, maxWidth, alt = "", flip = false, class: cls = "", speed = 1 } = Astro.props;
 const s = (sprites as Record<string, { src: string; frames: number; fps: number; w: number; h: number }>)[name];
-const w = s ? Math.round((s.w * height) / s.h) : height;
+const natW = s ? (s.w * wantH) / s.h : wantH;
+const k = maxWidth && natW > maxWidth ? maxWidth / natW : 1;
+const height = Math.round(wantH * k);
+const w = Math.round(natW * k);
 const dur = s ? (s.frames / s.fps / speed).toFixed(3) : "1";
 ---
 {s ? (

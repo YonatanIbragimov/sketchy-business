@@ -4,7 +4,8 @@ import Sprite from "../../components/Sprite.astro";
 import { byId } from "../../data/cast";
 
 // How each fight actually plays (from the game's MiniBosses.cpp and Boss.cpp).
-const fights: { id: string; name?: string; sprite?: string; ch: number; how: string[]; spoiler?: boolean }[] = [
+// photo: bosses with no sprite sheet yet (drawn by the game's code) get a cropped in-game screenshot instead.
+const fights: { id: string; name?: string; photo?: string; tagline?: string; ch: number; how: string[]; spoiler?: boolean }[] = [
   { id: "pink", ch: 1, how: [
     "A kneaded-eraser bouncer. He paws the ground, then charges.",
     "Get out of the way and let him run into the gate. He gets stuck.",
@@ -29,7 +30,7 @@ const fights: { id: string; name?: string; sprite?: string; ch: number; how: str
     "Keep moving when the puddle goes still. Hit it while it's up and spitting.",
     "In co-op it goes for Penny. Blindside it while it's busy with her.",
   ] },
-  { id: "staple", name: "Sergeant Staple", ch: 6, how: [
+  { id: "stapler", name: "The Stapler", photo: "/shots/boss_stapler.webp", tagline: "Guards the Great Inkwell after Blotto.", ch: 6, how: [
     "Staple volleys: keep jumping and don't stand still.",
     "He charges the wall and stuns himself. Hit him then.",
     "When he leaps, jump the shockwaves as he lands.",
@@ -41,7 +42,7 @@ const fights: { id: string; name?: string; sprite?: string; ch: number; how: str
     "Sweeps its pencil leg over its head and slams it down.",
     "When the leg sticks in the floor, it's open: get in and swing.",
   ] },
-  { id: "puncher", name: "The Puncher", ch: 8, how: [
+  { id: "puncher", name: "The Puncher", photo: "/shots/boss_puncher.webp", tagline: "A hole punch, guarding the Shredder.", ch: 8, how: [
     "Hovers and tracks you, then slams down. When it's stuck in the floor, it's vulnerable.",
     "Jump the shockwaves, and watch the paper-dot rain from above.",
   ], spoiler: true },
@@ -80,11 +81,14 @@ const fights: { id: string; name?: string; sprite?: string; ch: number; how: str
     );
     return (
       <section class="fight" id={f.id}>
-        <div class="pic">{m?.sprite ? <Sprite name={m.sprite} height={110} alt={name} /> : <span class="q scrawl">?</span>}</div>
+        <div class="pic">
+          {f.photo ? <img class="photo" src={f.photo} alt={`${name}, in the game`} width="130" height="130" loading="lazy" />
+            : m?.sprite ? <Sprite name={m.sprite} height={110} maxWidth={130} alt={name} /> : null}
+        </div>
         <div>
           <p class="ch">Chapter {f.ch}</p>
           <h2>{name}</h2>
-          {m?.tagline && <p class="tag">{m.tagline}</p>}
+          {(f.tagline ?? m?.tagline) && <p class="tag">{f.tagline ?? m?.tagline}</p>}
           {f.spoiler ? <details class="spoiler"><summary>How to beat {name}</summary>{body}</details> : body}
         </div>
       </section>
@@ -96,7 +100,7 @@ const fights: { id: string; name?: string; sprite?: string; ch: number; how: str
   .fight { display: grid; grid-template-columns: 130px 1fr; gap: 20px; align-items: start; margin-top: 40px; scroll-margin-top: 90px; }
   .fight h2 { margin: 0 0 2px !important; font-size: 2.1rem; }
   .pic { display: flex; justify-content: center; }
-  .q { font-size: 5rem; line-height: 1; }
+  .photo { width: 130px; height: 130px; background: #fff; padding: 5px; box-shadow: 0 2px 0 rgba(52,55,61,.12), 0 6px 14px rgba(52,55,61,.16); transform: rotate(-2deg); }
   .ch { margin: 0; color: var(--ink-faint); font-size: .9rem; }
   .tag { font-family: var(--font-hand); color: var(--red); font-size: 1.2rem; margin-bottom: 8px; }
   .fight li { line-height: 1.6; margin-bottom: 4px !important; }

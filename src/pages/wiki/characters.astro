@@ -25,10 +25,10 @@ const groups: { role: Role; title: string; note?: string }[] = [
               {m.sprite ? (
                 m.alt ? (
                   <>
-                    <span class="a"><Sprite name={m.sprite} height={g.role === "minion" ? 80 : 120} alt={m.name} /></span>
-                    <span class="b"><Sprite name={m.alt} height={g.role === "minion" ? 80 : 120} /></span>
+                    <span class="a"><Sprite name={m.sprite} height={g.role === "minion" ? 80 : 120} maxWidth={g.role === "minion" ? 76 : 110} alt={m.name} /></span>
+                    <span class="b"><Sprite name={m.alt} height={g.role === "minion" ? 80 : 120} maxWidth={g.role === "minion" ? 76 : 110} /></span>
                   </>
-                ) : <Sprite name={m.sprite} height={g.role === "minion" ? 80 : 120} alt={m.name} />
+                ) : <Sprite name={m.sprite} height={g.role === "minion" ? 80 : 120} maxWidth={g.role === "minion" ? 76 : 110} alt={m.name} />
               ) : <span class="quote" aria-hidden="true">“ ”</span>}
             </div>
             <div class="txt">

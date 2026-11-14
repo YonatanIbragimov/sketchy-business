@@ -21,7 +21,7 @@ const cards = [
     {cards.map((c) => (
       <li>
         <a class="sketch" href={c.href}>
-          <span class="pic"><Sprite name={c.s} height={78} /></span>
+          <span class="pic"><Sprite name={c.s} height={78} maxWidth={70} /></span>
           <span class="t">{c.t}</span>
           <span class="d">{c.d}</span>
         </a>
