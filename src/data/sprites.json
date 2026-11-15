@@ -279,6 +279,13 @@
   "w": 160,
   "h": 220
  },
+ "noggin_crawl": {
+  "src": "/art/noggin_crawl.webp",
+  "frames": 8,
+  "fps": 10,
+  "w": 213,
+  "h": 220
+ },
  "noggin_still": {
   "src": "/art/noggin.webp",
   "frames": 1,
@@ -292,12 +299,5 @@
   "fps": 1,
   "w": 588,
   "h": 640
- },
- "noggin_crawl": {
-  "src": "/art/noggin_crawl.webp",
-  "frames": 8,
-  "fps": 10,
-  "w": 287,
-  "h": 220
  }
 }

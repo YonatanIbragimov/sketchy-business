@@ -17,15 +17,15 @@ Noggin's body took about three seconds to draw, but it does a surprising amount.
   single wall by kicking off it over and over: you need two walls, or a ledge.
 - **Ledge grab.** Jump at the edge of a platform and Noggin hangs on. Press up to climb, down to let go.
 - **Slide.** Press down while running to slide under low gaps (and high saw blades).
-- **Crouch and crawl.** Hold down while standing to crouch, then move to crawl along on all fours. It's slow, but
-  you can stop and turn round whenever you like. Slide or roll into a gap too low to stand in and Noggin stays down
-  and crawls until there's room overhead. You can't jump until you can stand up.
+- **Crouch and squat-walk.** Hold down while standing to crouch, then move to shuffle along in a deep squat. It's a
+  bit slower than walking, and you can stop and turn round whenever you like. Slide or roll into a gap too low to
+  stand in and Noggin stays down and squat-walks until there's room overhead. You can't jump until you can stand up.
 
 <span class="crawl" aria-hidden="true"></span>
 <style>
-  .crawl { display: block; width: 125px; height: 96px; margin: 0 0 24px; background: url(/art/noggin_crawl.webp) 0 0 / 1000px 96px no-repeat;
+  .crawl { display: block; width: 93px; height: 96px; margin: 0 0 24px; background: url(/art/noggin_crawl.webp) 0 0 / 744px 96px no-repeat;
     animation: crawl .8s steps(8) infinite; }
-  @keyframes crawl { to { background-position: -1000px 0; } }
+  @keyframes crawl { to { background-position: -744px 0; } }
   @media (prefers-reduced-motion: reduce) { .crawl { animation: none; } }
 </style>
 - **Roll.** A quick roll in the direction you're going.
