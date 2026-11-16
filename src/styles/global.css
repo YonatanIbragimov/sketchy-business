@@ -138,3 +138,9 @@ th { font-family: var(--font-hand); font-size: 1.15rem; font-weight: 400; border
 .table-scroll { overflow-x: auto; }
 
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.nowrap { white-space: nowrap; }
+
+/* overflow guards: nothing in the page column may stick out of it */
+main p, main li, main td, main th, main h1, main h2, main h3 { overflow-wrap: break-word; }
+main img, main video { max-width: 100%; height: auto; }

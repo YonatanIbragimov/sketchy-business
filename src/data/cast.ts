@@ -1,5 +1,5 @@
 // Who's who. Sprites are the game's own art (scripts/build_art.py). Descriptions follow the game's STORY.md.
-export type Role = "hero" | "villain" | "friend" | "boss" | "minion";
+export type Role = "hero" | "villain" | "friend" | "errand" | "boss" | "minion";
 
 export interface Member {
   id: string;
@@ -115,6 +115,116 @@ export const cast: Member[] = [
   { id: "tack", name: "Tack", sprite: "tack", role: "minion", chapter: 1, tagline: "Drawing pin.", about: "Hangs under shelves and drops point-first when you pass underneath." },
   { id: "smudgeling", name: "Smudgeling", sprite: "smudgeling", role: "minion", chapter: 4, tagline: "A flying smudge.", about: "Shivers, then swoops. Move as soon as it shivers." },
   { id: "snips", name: "Snips", sprite: "snips", role: "minion", chapter: 6, tagline: "Scissors.", about: "Shakes, then charges. Jump when it shakes. 2 hits." },
+  // ---- the errand folk (1.1.1): each one keeps a gate shut until you do them a favour
+  {
+    id: "furrow", name: "Farmer Furrow", sprite: "furrow", role: "errand", chapter: 1,
+    tagline: "Straw hat, overalls, and a gate he can't open.",
+    about: "Runs a field in Margin Meadows. Lately the furrows keep turning up rubbed clean overnight, and he'd like to know who's doing it.",
+  },
+  {
+    id: "hatch", name: "Mrs Hatch", sprite: "hatch", role: "errand", chapter: 1,
+    tagline: "An old lady with a shawl, a crook, and opinions.",
+    about: "Has lived in the meadows longer than anyone. She remembers when the Artist drew something new every day.",
+  },
+  {
+    id: "grist", name: "Miller Grist", sprite: "grist", role: "errand", chapter: 1,
+    tagline: "A dusty miller with a flour sack.",
+    about: "Knows his machinery, and knows the Great Sharpener's screws didn't loosen themselves.",
+    spoiler: "He's the one who explains that the Last Pencil is the only pencil that can draw anything new, and that whoever loosened the Sharpener was planning to come back for it.",
+  },
+  {
+    id: "steve", name: "Sketchy Steve", sprite: "steve", role: "errand", chapter: 2,
+    tagline: "Half drawn, and hopeful anyway.",
+    about: "An unfinished draft: one arm missing, one leg still a dotted line. Smudge locked him up because \"drafts are mistakes\". Dot disagrees: nobody's finished yet.",
+  },
+  {
+    id: "coil", name: "Grandpa Coil", sprite: "coil", role: "errand", chapter: 3,
+    tagline: "The oldest spring in the notebook's binding.",
+    about: "A slightly rusty wire spring with little round spectacles and a curly wire beard. He watched Smudge cross the spine, and he has an old map of the far page.",
+    spoiler: "The map has Smudge's castle on it, labelled \"formerly the Artist's eraser\".",
+  },
+  {
+    id: "patch", name: "Patch", sprite: "patch", role: "errand", chapter: 3,
+    tagline: "A paper hole-reinforcer with a cheeky grin.",
+    about: "Holds the binding together, one hole at a time. Talks a lot for a doughnut.",
+  },
+  {
+    id: "wobble", name: "Wobble", sprite: "wobble", role: "errand", chapter: 4,
+    tagline: "The last pencil-drawn servant in a very tidy castle.",
+    about: "Shy, faded at the edges, and holding a feather duster. Smudge makes him erase himself a little \"neater\" every morning.",
+    spoiler: "He used to have a nose.",
+  },
+  {
+    id: "turnkey", name: "The Turnkey", sprite: "turnkey", role: "errand", chapter: 4,
+    tagline: "A big iron key with a big moustache. Recently sacked.",
+    about: "Ran Smudge's dungeons until he was replaced by something shinier. He knows his way round the keep, and he's not fond of his old boss.",
+    spoiler: "The torn portrait you help find shows Smudge brand new, on the Artist's desk: he was the Artist's own eraser, until he was replaced too.",
+  },
+  {
+    id: "memo", name: "Memo", sprite: "memo", role: "errand", chapter: 5,
+    tagline: "The sky's postmistress.",
+    about: "A yellow sticky note with a curled-corner bonnet and a satchel full of letters. Some of them are cries for help from Inkwell Village.",
+    spoiler: "Smudge's notes in purple ink, pinned to her board, spell out his whole plan.",
+  },
+  {
+    id: "glider", name: "Flt. Lt. Glider", sprite: "glider", role: "errand", chapter: 5,
+    tagline: "A paper-plane pilot with goggles and a scarf.",
+    about: "Flies for Captain Dogear, and is very particular about the Captain's orders.",
+  },
+  {
+    id: "nib", name: "Nib", sprite: "nib", role: "errand", chapter: 6,
+    tagline: "The printer's apprentice.",
+    about: "A young fountain-pen nib with an inky cap and apron, keeping the presses going while the village runs dry.",
+  },
+  {
+    id: "blotter", name: "Mrs Blotter", sprite: "blotter", role: "errand", chapter: 6,
+    tagline: "Inkwell Village's lamplighter.",
+    about: "A motherly pink ink-blotter who keeps the lamps lit. With the ink running out, that's getting hard.",
+  },
+  {
+    id: "stub", name: "Stub", sprite: "stub", role: "errand", chapter: 7,
+    tagline: "A retired crayon miner.",
+    about: "Worn down to a stub, with a miner's helmet and a big grey moustache. He knows every tunnel in Pencil Case Canyon.",
+    spoiler: "The pencil case is Smudge's barracks. Stub sends a spare sharpener blade ahead to Foreman Gearsley.",
+  },
+  {
+    id: "fuzz", name: "Fuzz", sprite: "fuzz", role: "errand", chapter: 7,
+    tagline: "A very excitable pipe cleaner.",
+    about: "Bent into a little figure and never still. Fuzz has noticed the Artist stopped colouring things in.",
+  },
+  {
+    id: "sprocket", name: "Sprocket", sprite: "sprocket", role: "errand", chapter: 8,
+    tagline: "A young cog in a too-big cap.",
+    about: "Works at the Sharpening Works and wants to do everything at once.",
+  },
+  {
+    id: "valve", name: "Old Valve", sprite: "valve", role: "errand", chapter: 8,
+    tagline: "The factory's oldest steam valve.",
+    about: "Has seen every pencil the Works ever sharpened.",
+    spoiler: "He asks the question nobody else does: once the pencil's sharp, who gets it?",
+  },
+  {
+    id: "lump", name: "Lump", sprite: "lump", role: "errand", chapter: 9,
+    tagline: "A nervous sugar cube on the Artist's desk.",
+    about: "Lives off the page, next to the coffee, and is worried about everything. Mostly the coffee.",
+    spoiler: "From the desk you can see the Artist: sitting over the book every evening, not drawing. The real pencil went missing into the book. The last thing the Artist drew was Noggin.",
+  },
+  {
+    id: "dunk", name: "Dunk", sprite: "dunk", role: "errand", chapter: 9,
+    tagline: "A biscuit sailor, soggy at the bottom.",
+    about: "A digestive biscuit with a sailor's cap and a pipe, who's been dunked in the tea one time too many.",
+  },
+  {
+    id: "quibble", name: "Quibble", sprite: "quibble", role: "errand", chapter: 10,
+    tagline: "A note scribbled in the margin.",
+    about: "A squiggle-and-asterisk with something to say about everything, mostly corrections.",
+    spoiler: "Under white-out nothing's ever really gone, and a crumb of Smudge shows he's been erasing himself as he goes: an eraser afraid of being thrown away.",
+  },
+  {
+    id: "fray", name: "Fray", sprite: "fray", role: "errand", chapter: 10,
+    tagline: "The very edge of the page.",
+    about: "A strip of torn paper edge with streaks of white-out on her. Tired, threadbare, and brave.",
+  },
 ];
 
 export const byId = Object.fromEntries(cast.map((m) => [m.id, m]));

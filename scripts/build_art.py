@@ -25,19 +25,22 @@ CAST = {
 }
 for cid in ["dot", "pink", "scrunch", "reginald", "blotto", "compass", "blanc", "binderclip", "dogear", "protractor",
             "teabag", "mayor", "gearsley", "margin", "nub", "springclip", "tack", "smudgeling", "snips",
-            "folk1", "folk2", "folk3"]:
+            "folk1", "folk2", "folk3",
+            # the errand folk (1.1.1)
+            "furrow", "hatch", "grist", "steve", "coil", "patch", "wobble", "turnkey", "memo", "glider", "nib",
+            "blotter", "stub", "fuzz", "sprocket", "valve", "lump", "dunk", "quibble", "fray"]:
     CAST[cid] = (f"cast/{cid}.json", None)
 for extra in ["pink_walk", "scrunch_walk", "reginald_walk", "reginald_attack", "blotto_walk", "blanc_walk", "dot_walk",
               "compass_walk", "nub_walk", "gearsley_walk", "margin_walk", "mayor_walk"]:
     CAST[extra] = (f"cast/{extra}.json", None)
 
 # source sheets drawn with the head on: art_src/<path>, cols x rows, fps
-SHEETS = {
-    "noggin_idle": ("noggin/noggin__idle__4x4__8fps.png", 4, 4, 8),
-    "noggin_run": ("noggin/noggin__run__4x2__12fps.png", 4, 2, 12),
-    "noggin_jump": ("noggin/noggin__double_jump__4x2__12fps.png", 4, 2, 12),
-    "noggin_slash": ("noggin/noggin__slash__4x2__12fps.png", 4, 2, 12),
-    "noggin_crawl": ("noggin/noggin__crawl__4x2__12fps.png", 4, 2, 10),
+SHEETS = {  # Noggin's 16-frame redraw (Nov 2026), at the rates the game plays them
+    "noggin_idle": ("noggin/noggin__idle__4x8__16fps.png", 4, 8, 16),
+    "noggin_run": ("noggin/noggin__run__4x4__36fps.png", 4, 4, 36),
+    "noggin_jump": ("noggin/noggin__double_jump__4x4__38fps.png", 4, 4, 38),
+    "noggin_slash": ("noggin/noggin__slash__4x4__62fps.png", 4, 4, 54),
+    "noggin_crawl": ("noggin/noggin__crawl__4x4__24fps.png", 4, 4, 24),
 }
 STILLS = {
     "noggin": "art_src/noggin/noggin__reference.png",

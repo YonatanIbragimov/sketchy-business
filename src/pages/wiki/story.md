@@ -29,6 +29,10 @@ move. Whether he's secretly rooting for him is a matter for chapter 10.
 Drafts, practice and mistakes are part of the drawing. A crumpled-up early draft, the first doodle ever drawn, and a
 correction fluid who covers mistakes instead of fixing them all have something to say about it.
 
+Between the big moments, the story comes out a favour at a time: every level has [errands](/wiki/errands), and the
+twenty characters behind them each know a piece of what's going on (who Smudge used to be, why the Artist stopped
+drawing). The errands page has it chapter by chapter, behind spoiler folds.
+
 <details class="spoiler">
 <summary>Chapter by chapter (whole story)</summary>
 

@@ -7,6 +7,7 @@ const groups: { role: Role; title: string; note?: string }[] = [
   { role: "hero", title: "Heroes" },
   { role: "villain", title: "Villains (and the narrator)" },
   { role: "friend", title: "Friends along the way" },
+  { role: "errand", title: "Errand folk", note: "Each one keeps a gate shut until you do them a favour." },
   { role: "boss", title: "Mini-bosses", note: "Strategy for each one is in the boss guide." },
   { role: "minion", title: "Smudge's minions" },
 ];
@@ -17,7 +18,7 @@ const groups: { role: Role; title: string; note?: string }[] = [
   {groups.map((g) => (
     <section>
       <h2>{g.title}</h2>
-      {g.note && <p class="note">{g.note} <a href="/wiki/bosses">Boss guide →</a></p>}
+      {g.note && <p class="note">{g.note} {g.role === "errand" ? <a href="/wiki/errands">Errands →</a> : <a href="/wiki/bosses">Boss guide →</a>}</p>}
       <div class:list={["grid", g.role]}>
         {cast.filter((m) => m.role === g.role).map((m) => (
           <article class="card sketch" id={m.id}>
@@ -49,7 +50,7 @@ const groups: { role: Role; title: string; note?: string }[] = [
 <style>
   .note { color: var(--ink-soft); }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 26px; margin-bottom: 40px; }
-  .grid.minion { grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+  .grid.minion { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
   .card { display: grid; grid-template-columns: 110px 1fr; gap: 16px; align-items: start; scroll-margin-top: 90px; }
   .minion .card { grid-template-columns: 76px 1fr; }
   .pic { display: flex; justify-content: center; align-items: flex-end; min-height: 120px; position: relative; overflow: hidden; }
@@ -57,7 +58,8 @@ const groups: { role: Role; title: string; note?: string }[] = [
   .card:hover .pic .a { display: none; }
   .card:hover .pic .b { display: inline; }
   .quote { font-family: var(--font-hand); font-size: 5rem; color: var(--red); line-height: 1; }
-  h3 { margin: 0; font-size: 1.6rem; }
+  h3 { margin: 0; font-size: 1.6rem; overflow-wrap: anywhere; }
+  .txt { min-width: 0; }
   .ch { margin: 0; font-size: .85rem; color: var(--ink-faint); line-height: 1.4; }
   .tag { font-family: var(--font-hand); font-size: 1.15rem; color: var(--red); margin: 4px 0 6px; line-height: 1.3; }
   .txt p { font-size: .95rem; line-height: 1.55; margin-bottom: 8px; }
