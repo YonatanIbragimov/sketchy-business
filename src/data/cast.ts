@@ -12,6 +12,7 @@ export interface Member {
   about: string;
   tips?: string;
   spoiler?: string;      // the bit that gives the story away, hidden by default
+  photo?: string;        // an in-game screenshot, for characters whose art isn't drawn yet
 }
 
 export const cast: Member[] = [
@@ -56,7 +57,7 @@ export const cast: Member[] = [
     about: "Everyone else has gone. Half the machines need two people to run, so he's very glad to see you.",
   },
   {
-    id: "margin", name: "Old Margin", sprite: "margin", alt: "margin_walk", role: "friend", chapter: 10,
+    id: "margin", name: "Old Margin", sprite: "margin", alt: "margin_walk", role: "friend", chapter: 11,
     tagline: "The first doodle ever drawn in the book.",
     about: "Lives out in the Forgotten Margins. Knows things about artists and sketchbooks that nobody else remembers.",
     spoiler: "He tells Noggin that artists never leave a sketchbook, they just turn the page, and that the pencil is for drawing what happens next, not a better body.",
@@ -105,7 +106,7 @@ export const cast: Member[] = [
     tagline: "Swings from the desk lamp.", about: "Steeped in bad intentions.",
   },
   {
-    id: "blanc", name: "Madame Blanc", sprite: "blanc", alt: "blanc_walk", role: "boss", chapter: 10,
+    id: "blanc", name: "Madame Blanc", sprite: "blanc", alt: "blanc_walk", role: "boss", chapter: 11,
     tagline: "Correction fluid.", about: "She doesn't erase mistakes, she covers them up. Smudge sends for her to fix \"the ink problem\" (that's Penny).",
   },
 
@@ -215,15 +216,27 @@ export const cast: Member[] = [
     about: "A digestive biscuit with a sailor's cap and a pipe, who's been dunked in the tea one time too many.",
   },
   {
-    id: "quibble", name: "Quibble", sprite: "quibble", role: "errand", chapter: 10,
+    id: "quibble", name: "Quibble", sprite: "quibble", role: "errand", chapter: 11,
     tagline: "A note scribbled in the margin.",
     about: "A squiggle-and-asterisk with something to say about everything, mostly corrections.",
     spoiler: "Under white-out nothing's ever really gone, and a crumb of Smudge shows he's been erasing himself as he goes: an eraser afraid of being thrown away.",
   },
   {
-    id: "fray", name: "Fray", sprite: "fray", role: "errand", chapter: 10,
+    id: "fray", name: "Fray", sprite: "fray", role: "errand", chapter: 11,
     tagline: "The very edge of the page.",
     about: "A strip of torn paper edge with streaks of white-out on her. Tired, threadbare, and brave.",
+  },
+  // ---- the Crayon Kiln (1.1.3)
+  {
+    id: "wick", name: "Wick", sprite: "", photo: "/shots/boss_wick.webp", role: "boss", chapter: 10,
+    tagline: "The first protector. A candle-smoke wraith.",
+    about: "The Artist's old desk candle, who kept them company through every late night of drawing. Blown out the night the pencil vanished, and relit by somebody pink. Now he guards the graphite core, deep in the Crayon Kiln.",
+    tips: "Strategy in the boss guide.",
+  },
+  {
+    id: "ember", name: "Ember sprite", sprite: "", photo: "/shots/ember.webp", role: "minion", chapter: 10,
+    tagline: "A little flying flame.",
+    about: "Bobs about the Kiln, flares up bright, then dashes at you. Two hits.",
   },
 ];
 

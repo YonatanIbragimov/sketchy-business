@@ -23,7 +23,7 @@ const groups: { role: Role; title: string; note?: string }[] = [
         {cast.filter((m) => m.role === g.role).map((m) => (
           <article class="card sketch" id={m.id}>
             <div class="pic">
-              {m.sprite ? (
+              {m.photo ? <img class="photo" src={m.photo} alt={`${m.name}, in the game`} width="110" height="110" loading="lazy" /> : m.sprite ? (
                 m.alt ? (
                   <>
                     <span class="a"><Sprite name={m.sprite} height={g.role === "minion" ? 80 : 120} maxWidth={g.role === "minion" ? 76 : 110} alt={m.name} /></span>
@@ -57,6 +57,8 @@ const groups: { role: Role; title: string; note?: string }[] = [
   .pic .b { display: none; }
   .card:hover .pic .a { display: none; }
   .card:hover .pic .b { display: inline; }
+  .photo { width: 100%; max-width: 110px; aspect-ratio: 1; object-fit: cover; border: 2px solid var(--ink); border-radius: 6px 4px 7px 5px; }
+  .minion .photo { max-width: 76px; }
   .quote { font-family: var(--font-hand); font-size: 5rem; color: var(--red); line-height: 1; }
   h3 { margin: 0; font-size: 1.6rem; overflow-wrap: anywhere; }
   .txt { min-width: 0; }

@@ -45,7 +45,8 @@ drawing). The errands page has it chapter by chapter, behind spoiler folds.
 7. **Pencil Case Canyon.** The road to the Works runs through a giant pencil case full of minions.
 8. **Grind.** Noggin sharpens the pencil in the Great Grinder, and Smudge snatches it the moment it's done. Then comes the shredder.
 9. **Coffee Stain Marsh.** The shredder throws Noggin clean off the page and onto the Artist's desk.
-10. **The Final Draft.** Smudge is erasing the margins on his way to the edge of the page. Old Margin, the first doodle ever drawn, tells Noggin that artists never leave a sketchbook, they just turn the page, and that the pencil is for drawing what happens next, not a better body. At the edge of the page Smudge slips on one of *our* shavings and falls into the wastepaper basket, and the pencil comes home.
+10. **The Crayon Kiln.** Back on the page, Smudge has left a note: six of his dearest friends will see Noggin out. Under it, in the Artist's hand, a recipe for a pencil that can draw anything: a core, a casing, lacquer, a ferrule, an eraser cap and a point. The first protector, Wick (the Artist's old desk candle, relit by Smudge), guards the graphite core in the kiln where broken crayons are melted down. One part down, five to go.
+11. **The Final Draft.** Smudge is erasing the margins on his way to the edge of the page. Old Margin, the first doodle ever drawn, tells Noggin that artists never leave a sketchbook, they just turn the page, and that the pencil is for drawing what happens next, not a better body. At the edge of the page Smudge slips on one of *our* shavings and falls into the wastepaper basket, and the pencil comes home.
 
 **The ending.** With the Last Pencil, Noggin can draw anything. He draws himself a smaller head, then uses the eraser on
 the end to undo it. Dot takes her place at the very end of the story ("I'll only be there until the next story

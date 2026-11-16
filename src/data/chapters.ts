@@ -1,4 +1,4 @@
-// The ten chapters, as in the game's assets/story.json and STORY.md. Level names come from assets/levels/chN/*.json.
+// The chapters, as in the game's assets/story.json and STORY.md. Level names come from assets/levels/chN/*.json.
 export interface Chapter {
   n: number;
   title: string;
@@ -74,7 +74,14 @@ export const chapters: Chapter[] = [
     late: true,
   },
   {
-    n: 10, title: "The Final Draft", place: "The Forgotten Margins", paper: "stained parchment", shot: "ch10", boss: "blanc",
+    n: 10, title: "The Crayon Kiln", place: "The Crayon Kiln", paper: "kiln brick and melted wax", shot: "kiln", boss: "wick",
+    blurb: "Smudge has left a note: six of his dearest friends will see you out. The first guards the graphite core, deep in the kiln where the Artist's broken crayons are melted down. The floor is molten wax.",
+    levels: ["Wax Works", "Crayon Cliffs", "The Melting Floor", "Wick's Hearth"],
+    new: ["Molten wax", "Paper planks that burn under your feet", "Falling embers (watch for the glowing mark)", "Wax-rock that sinks while you stand on it", "Your first protector, and the first part of the Ultimate Pencil"],
+    late: true,
+  },
+  {
+    n: 11, title: "The Final Draft", place: "The Forgotten Margins", paper: "stained parchment", shot: "ch10", boss: "blanc",
     blurb: "Thorns, the edge of the page, and Madame Blanc's tower. If Smudge reaches the edge, he can rub out the whole sketchbook.",
     levels: ["The Thorn Margin", "Edge of the Page", "Madame Blanc's Tower", "The Final Draft"],
     new: ["Everything at once", "The hardest combat in the book"],

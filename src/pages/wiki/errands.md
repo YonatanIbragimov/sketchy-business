@@ -6,7 +6,7 @@ description: The locked gates in every level of Sketchy Business, the five kinds
 
 Every level has one or two **errands**: a gate with a padlock on it, and somebody standing beside it who needs a
 favour before it opens. Walk up and they'll tell you what they need. Do it, and they'll tell you a bit more of the
-story, and the gate swings open. There are 70 of them across the ten chapters.
+story, and the gate swings open. There are 77 of them across the eleven chapters.
 
 > "An errand. Someone wants something fetched. Welcome to adventuring: ninety percent errands, ten percent falling."
 > *The Narrator*
@@ -46,7 +46,7 @@ Errand rooms come in a few shapes, so they're never just a flat corridor:
 
 ## Who asks
 
-Twenty characters in all, from a farmer in the meadows to a frayed page edge at the end of the book. They're all on the
+Twenty-five characters in all, from a farmer in the meadows to a frayed page edge at the end of the book. They're all on the
 [characters page](/wiki/characters#furrow), under **Errand folk**.
 
 ## The story in the errands
@@ -82,7 +82,7 @@ chapter by chapter:
 </details>
 
 <details class="spoiler">
-<summary>Chapters 7 to 10</summary>
+<summary>Chapters 7 to 11</summary>
 
 - **7. Pencil Case Canyon.** Stub the crayon miner: the pencil case is Smudge's barracks. Fuzz says the Artist stopped
   colouring things in. Stub sends a spare sharpener blade on ahead to Foreman Gearsley.
@@ -90,7 +90,11 @@ chapter by chapter:
 - **9. Coffee Stain Marsh.** Off the page, Lump and Dunk explain the Artist's side: the Artist sits over the book every
   evening and doesn't draw, because the real pencil went missing *into* the book. The last thing the Artist drew was
   Noggin.
-- **10. The Final Draft.** Quibble and Fray: under white-out nothing is ever really gone, and a crumb of Smudge shows
+- **10. The Crayon Kiln.** Stump, a burnt-out match, Mrs Glaze, Drip, Kindling and Snuff: the Kiln is where the
+  Artist's broken crayons are melted down, and nobody's poured a new one in ages. Wick was the Artist's desk candle,
+  blown out the night the pencil vanished and relit by "somebody pink". The Artist's unfinished sketches show a new
+  pencil, with notes all round it: core, casing, point...
+- **11. The Final Draft.** Quibble and Fray: under white-out nothing is ever really gone, and a crumb of Smudge shows
   he's been erasing himself as he goes, an eraser afraid of being thrown away. Before the last fight, Noggin collects
   the first pages of his own story.
 

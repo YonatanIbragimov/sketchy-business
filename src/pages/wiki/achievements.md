@@ -1,14 +1,14 @@
 ---
 layout: ../../layouts/Wiki.astro
 title: Achievements
-description: All 114 achievements in Sketchy Business, from beating bosses to dying an absurd number of times.
+description: All 118 achievements in Sketchy Business, from beating bosses to dying an absurd number of times.
 ---
 
-There are **114 achievements**, from the sensible (beat every boss) to the stupid (fall into the same pit ten times in a
+There are **118 achievements**, from the sensible (beat every boss) to the stupid (fall into the same pit ten times in a
 row). Earn one and a little card pops up in the corner, and the Narrator has something to say about it. They're all
 on the **Achievements** screen in the main menu and the pause menu, with your progress on the counting ones.
 
-**28 are hidden.** They show as ??? here and in the game until you earn them. Some are very hard; some you'll
+**29 are hidden.** They show as ??? here and in the game until you earn them. Some are very hard; some you'll
 get by accident and wish you hadn't. The **Co-op** ones only count when you're playing with Penny.
 
 Your achievements are saved on your PC with your game, and they survive updates.
@@ -28,11 +28,13 @@ Your achievements are saved on your PC with your game, and they survive updates.
 | **Case Closed** | Finish chapter 7. |
 | **Ground Down** | Finish chapter 8. |
 | **Spilled It** | Finish chapter 9. |
-| **The Final Draft** | Finish chapter 10. |
+| **The Final Draft** | Finish the final chapter. |
 | **Page One** | Finish your first level. |
 | **Bookworm** | Finish 40 levels. |
 | **Big Pink, Small Problem** | Beat your first boss. |
 | **Boss Collector** | Beat 10 bosses. |
+| **Wax On, Wax Off** | Finish the Crayon Kiln. |
+| **Some Assembly Required** | Earn a part of the Ultimate Pencil. |
 
 </div>
 
@@ -48,7 +50,7 @@ Your achievements are saved on your PC with your game, and they survive updates.
 | **Sweeper** | Collect every shaving in 10 levels. |
 | **Pencil Sprint** | Finish a level in under 60 seconds. |
 | **Not a Scratch** | Finish a level without taking a hit. |
-| *+ 14 hidden* | *14 more, revealed when you earn them.* |
+| *+ 15 hidden* | *15 more, revealed when you earn them.* |
 
 </div>
 
@@ -141,6 +143,7 @@ Your achievements are saved on your PC with your game, and they survive updates.
 | **Toast** | Get burnt. |
 | **Soggy** | Drown. |
 | **Boxed In** | Get flattened by a crate. |
+| **Hot Feet** | Fall into molten wax 25 times. |
 | *+ 1 hidden* | *One more, revealed when you earn it.* |
 
 </div>

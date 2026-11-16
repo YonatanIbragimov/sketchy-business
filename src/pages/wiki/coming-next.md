@@ -4,9 +4,9 @@ title: Coming next
 description: What's being built for Sketchy Business next - six new chapters, six protector bosses, and the Ultimate Pencil.
 ---
 
-> **Not in the game yet.** Everything on this page is being made right now. The current download (v1.1.2) has the
-> ten chapters and forty levels on the [chapters page](/wiki/chapters). Each new chapter arrives in a free update,
-> and the wiki gets its full page the day it's out.
+> **The first one is out.** The Crayon Kiln (chapter 10) is in the current download (v1.1.3): see the
+> [chapters page](/wiki/chapters) and Wick in the [boss guide](/wiki/bosses#wick). The other five are being made now
+> and arrive in free updates; each gets its full wiki page the day it's out.
 
 ## Six new chapters, six protectors
 
@@ -21,8 +21,8 @@ of drawings**: it changes how you move and fight across the whole chapter, not j
 
 | Chapter | Protector and element | Pencil piece |
 |---|---|---|
-| **The Crayon Kiln** (next): where broken crayons are melted down | **Wick**, a candle-smoke wraith. *Fire: paper burns.* | Graphite core |
-| The Inkwell Depths: a flooded fountain pen | The Octo-Pen. *Flood: ink smears your lines.* | Cedar casing |
+| **The Crayon Kiln** (out now, chapter 10): where broken crayons are melted down | **Wick**, a candle-smoke wraith. *Fire: paper burns.* | Graphite core |
+| **The Inkwell Depths** (next): a flooded fountain pen | The Octo-Pen. *Flood: ink smears your lines.* | Cedar casing |
 | Glue Gulch: everything's sticky | Gloop, a glue-stick golem. *Glue: it sticks to you.* | Yellow lacquer |
 | Static Skies: a storm of graphite dust | Zap, a rubbed balloon. *Static and lightning.* | Metal ferrule |
 | Sandpaper Dunes: a desert of shredded paper | Grit, a sandpaper sandworm. *Grinds drawings away.* | Pink eraser cap |
@@ -30,9 +30,9 @@ of drawings**: it changes how you move and fight across the whole chapter, not j
 
 </div>
 
-That's 24 new levels, for 64 in all.
+That's 24 new levels, for 64 in all (44 so far).
 
-## First up: the Crayon Kiln
+## Out now: the Crayon Kiln
 
 The Kiln is where the Artist's broken crayons go to be melted down, and the floor is **molten wax**. Paper planks
 start smouldering the moment you stand on them, embers rain down (watch for the glowing mark where one is about to
