@@ -9,6 +9,10 @@ import { byId } from "../../data/cast";
     Ten chapters, four levels each. Every chapter is drawn on its own kind of paper. Levels 1 to 3 end when you walk
     off the right-hand edge of the page; level 4 ends with a boss. Later chapters keep their story behind a spoiler.
   </p>
+  <p class="next-note sketch">
+    <strong>Six more chapters are on the way</strong>, starting with the Crayon Kiln: six protector bosses, 24 new levels,
+    and the Ultimate Pencil. <a href="/wiki/coming-next">See what's coming →</a>
+  </p>
 
   <ol class="chapters">
     {chapters.map((c) => {
@@ -41,6 +45,7 @@ import { byId } from "../../data/cast";
 </Wiki>
 
 <style>
+  .next-note { padding: 12px 16px; margin-bottom: 28px; }
   .chapters { list-style: none; padding: 0 !important; }
   .chapters > li { display: grid; grid-template-columns: 380px 1fr; gap: 30px; align-items: start; margin-bottom: 64px; scroll-margin-top: 90px; }
   .chapters > li:nth-child(even) figure { transform: rotate(1deg); }
