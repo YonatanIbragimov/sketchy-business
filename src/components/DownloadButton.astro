@@ -1,9 +1,9 @@
 ---
-import { release, downloadUrl } from "../data/release";
+import { release } from "../data/release";
 interface Props { big?: boolean; label?: string }
 const { big = false, label = "Download for Windows" } = Astro.props;
 ---
-<a class:list={["btn", "dl", { big }]} href={downloadUrl} data-version={release.version}>
+<a class:list={["btn", "dl", { big }]} href="#download" data-gate data-version={release.version}>
   <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
   <span>{label}<br /><small>v{release.version} · {release.sizeMB} MB · Windows 10 &amp; 11 (64-bit)</small></span>
 </a>

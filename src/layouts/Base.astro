@@ -1,6 +1,10 @@
 ---
 import "../styles/global.css";
 import release from "../data/release.json";
+import { downloadUrl } from "../data/release";
+// Early access: the installer link only appears after the passcode. (A light gate: it keeps the download off the open
+// page, it isn't security - the code and the link are both in the page's script.)
+const gateUrl = btoa(downloadUrl);
 
 interface Props { title?: string; description?: string; wide?: boolean }
 const { title, description = "A hand-drawn platformer about a doodle with an enormous head, a very rude narrator, and a pompous eraser who stole the Last Pencil. Free for Windows.", } = Astro.props;
@@ -60,12 +64,53 @@ const ogImage = new URL("/og.jpg", Astro.site).href;
       <slot />
     </main>
 
+    <dialog id="gate" class="gate" aria-labelledby="gate-title">
+      <form method="dialog" class="gate-in" id="gate-form">
+        <h2 id="gate-title">Early access</h2>
+        <p>Sketchy Business is invite-only for now. Enter the passcode you were given to download it.</p>
+        <label for="gate-code">Passcode</label>
+        <input id="gate-code" name="code" type="password" inputmode="numeric" autocomplete="off" required />
+        <p class="gate-err" id="gate-err" role="alert" hidden>That's not the code. Try again.</p>
+        <div class="gate-btns">
+          <button type="button" class="btn ghost" id="gate-cancel">Cancel</button>
+          <button type="submit" class="btn" id="gate-go">Download</button>
+        </div>
+      </form>
+    </dialog>
+    <script define:vars={{ gateUrl }}>
+      (() => {
+        const dlg = document.getElementById("gate");
+        const form = document.getElementById("gate-form");
+        const input = document.getElementById("gate-code");
+        const err = document.getElementById("gate-err");
+        const open = (e) => {
+          e.preventDefault();
+          err.hidden = true;
+          input.value = "";
+          if (dlg.showModal) dlg.showModal(); else dlg.setAttribute("open", "");
+          input.focus();
+        };
+        document.querySelectorAll("[data-gate]").forEach((a) => a.addEventListener("click", open));
+        document.getElementById("gate-cancel").addEventListener("click", () => dlg.close());
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (input.value.trim() === "1234") {
+            dlg.close();
+            window.location.href = atob(gateUrl);
+          } else {
+            err.hidden = false;
+            input.select();
+          }
+        });
+      })();
+    </script>
+
     <footer class="foot">
       <div class="wrap">
         <p>
           <strong>Sketchy Business</strong> v{release.version} for Windows 10 &amp; 11 ·
           <a href="/download">Download</a> · <a href="/wiki">Wiki</a> · <a href="/wiki/faq">Help</a> ·
-          <a href={`https://github.com/${release.repo}/releases`}>All versions</a>
+          <a href="#download" data-gate>All versions</a>
         </p>
         <p class="tiny">Drawn by hand, coded on a homemade engine called Graphite. No erasers were harmed. Several were humiliated.</p>
       </div>
@@ -86,6 +131,19 @@ const ogImage = new URL("/og.jpg", Astro.site).href;
         .top { position: static; }
         nav { gap: 2px 14px; font-size: 1.15rem; }
       }
+      .gate { border: 2px solid var(--ink); border-radius: 10px 6px 12px 8px; background: var(--paper); color: var(--ink);
+        padding: 0; width: min(420px, calc(100vw - 32px)); box-shadow: 4px 6px 0 var(--red); }
+      .gate::backdrop { background: rgba(30, 32, 36, .45); }
+      .gate-in { padding: 22px 22px 18px; }
+      .gate h2 { font-family: var(--font-hand); font-size: 2rem; margin: 0 0 6px; }
+      .gate p { margin: 0 0 14px; line-height: 1.45; }
+      .gate label { display: block; font-family: var(--font-hand); font-size: 1.2rem; margin-bottom: 4px; }
+      .gate input { width: 100%; box-sizing: border-box; font: inherit; font-size: 1.2rem; padding: 10px 12px;
+        border: 2px solid var(--ink); border-radius: 6px; background: #fff; color: var(--ink); }
+      .gate input:focus { outline: 3px solid color-mix(in srgb, var(--red) 45%, transparent); outline-offset: 1px; }
+      .gate-err { color: var(--red); margin: 8px 0 0 !important; }
+      .gate-btns { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+      .gate .ghost { background: transparent; box-shadow: none; }
       .foot { margin-top: 96px; padding: 32px 0 48px; border-top: 2px dashed rgba(52,55,61,.35); font-size: .95rem; }
       .foot p { margin: 0 0 8px; line-height: 1.6; }
       .tiny { color: var(--ink-faint); font-size: .85rem; }

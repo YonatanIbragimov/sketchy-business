@@ -11,7 +11,7 @@ import { release, releasesUrl } from "../data/release";
         <h1>Download</h1>
         <p class="lede">Sketchy Business is free. One installer, about {release.sizeMB} MB, and it sets up everything the game needs.</p>
         <DownloadButton big />
-        <p class="meta">Version {release.version} · released {new Date(release.date + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })} · <a href={releasesUrl}>older versions &amp; changes</a></p>
+        <p class="meta">Version {release.version} · released {new Date(release.date + "T12:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })} · <a href="#download" data-gate>older versions &amp; changes</a></p>
       </div>
       <div class="pose" aria-hidden="true"><Sprite name="noggin_run" height={190} /></div>
     </div>
