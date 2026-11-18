@@ -14,6 +14,9 @@ description: Tips for Sketchy Business, from shavings to minions to the Narrator
 - **Assist mode** (Settings → Gameplay) gives you 5 hearts and a slightly slower, more forgiving game. Switch it on or
   off any time.
 - **Listen to the Narrator.** Between the insults he's usually telling you how the next bit works.
+- **Not sure where to go?** Stand still for a few seconds and a red arrow points the way on.
+- **There's a flag after every puzzle room**, so a slip on the jumps after it doesn't mean solving it again.
+- **A chapter's goal counts from the foot of its landmark** (the Great Sharpener's pencil arch, for one): no need to walk into the machine itself.
 
 ## Minions
 

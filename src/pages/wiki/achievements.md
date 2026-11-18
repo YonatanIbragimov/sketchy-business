@@ -63,7 +63,7 @@ Your achievements are saved on your PC with your game, and they survive updates.
 | **Errand Boy** | Finish your first errand. |
 | **Delivery Service** | Finish 10 errands. |
 | **Small Favours** | Finish 35 errands. |
-| **Everybody's Friend** | Finish every errand (70). |
+| **Everybody's Friend** | Finish every errand (70). Each errand counts once, however often you replay it. |
 | **Fetch!** | Finish 5 fetch errands. |
 | **Hoarder** | Finish 5 gather errands. |
 | **Lock Picker** | Finish 5 rescue errands. |
@@ -116,7 +116,7 @@ Your achievements are saved on your PC with your game, and they survive updates.
 | **Rage Quit** | Quit to the menu 25 times. |
 | **Coffee Break** | Spend 10 minutes in the pause menu. |
 | **Can't Decide** | Change direction 30 times in 5 seconds. |
-| **Long Way Down** | Fall 2,500 pixels in one go and die. |
+| **Long Way Down** | Fall 1,500 pixels in one go and die. |
 | **Skipper** | Skip 20 cutscenes. |
 
 </div>
