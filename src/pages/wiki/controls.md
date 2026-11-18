@@ -25,11 +25,16 @@ Any Xbox-style controller works; button names below are Xbox ones.
 
 </div>
 
-**In cutscenes:** <kbd>Space</kbd> skips to the next line, <kbd>Esc</kbd> skips the scene.
+**In cutscenes:** <kbd>Space</kbd> shows the rest of a line; press it again for the next one. <kbd>Esc</kbd> skips the
+scene. Missed something? Pause → **Recent lines** pages back through everything that's been said, with the errands
+you've taken on at the top.
+
+**The pause menu** also shows the **Ultimate Pencil**: which parts you've found and which are still out there.
 
 ## Two players
 
-See [Co-op](/wiki/co-op) for who gets which controller. With no controllers at all, both players share the keyboard:
+See [Co-op](/wiki/co-op) for who gets which controller. **Settings → Controls → Showing: Penny** lists her keys for
+however many controllers are plugged in. With no controllers at all, both players share the keyboard:
 
 <div class="table-scroll">
 
@@ -49,6 +54,11 @@ See [Co-op](/wiki/co-op) for who gets which controller. With no controllers at a
   forgiving and the dash recharges faster. Turn it on any time; nobody's judging. Well, the Narrator is, but he
   judges everything.
 - **Narrator text speed**: slow, normal or fast.
+- **Story scenes: Wait for Space** (Settings → Gameplay): story lines stay up until you press Space, so you can read
+  at your own pace.
+- **Dialogue text size** (Settings → Gameplay): Normal, Large or Larger, for the Narrator's box and the errand card.
 - **Speedrun timer**: on or off.
 - **Hand-drawn wobble** (Settings → Video): how much the lines boil. Turn it down if it bothers you.
+- **Paper lines & grain** (Settings → Video): Full, Soft or Faint, for the ruled lines and paper texture behind
+  everything.
 - **Screen shake**, a separate volume for every kind of sound, display mode, resolution, VSync and an FPS limit.

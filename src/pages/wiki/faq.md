@@ -29,6 +29,11 @@ list). To wipe everything instead, close the game and delete `save.json` from th
 
 **How does saving work?**
 Every flag and every boss arena saves automatically. Pause → **Save & quit** saves and goes back to the menu.
+"Saved" only appears once the save has really been written.
+
+**It says "Couldn't save".**
+The game couldn't write to your saves folder (a full disk, or a folder that's read-only or locked by another program).
+You can **Try again**, go **Back to the game**, or **Leave without saving**. Nothing is lost until you choose the last one.
 
 ## Controllers
 

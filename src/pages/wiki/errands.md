@@ -11,7 +11,8 @@ across the eleven chapters, and two sorts:
   You'll always know: whoever's standing there tells you the gate's locked, and the game stops to let them say so.
 - **Side errands** (the other 60): no gate. They call out what they need as you walk past, and you can do it or
   carry on. Do it anyway and they'll tell you a bit more of the story, and everyone's **hearts get topped right up**.
-  The errand waits for you if you walk on, so you can come back for it.
+  The errand waits for you if you walk on, so you can come back for it. It still waits after you quit and
+  **Continue**, or when Penny joins or leaves.
 
 > "An errand. Someone wants something fetched. Welcome to adventuring: ninety percent errands, ten percent falling."
 > *The Narrator*

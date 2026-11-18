@@ -37,3 +37,24 @@ solved. There are 69 of them across the game. Here's every kind, with a nudge ra
 </div>
 
 In co-op there are also four [two-player puzzles](/wiki/co-op#two-player-puzzles).
+
+## Reading a room
+
+Every switch is drawn in its world's own material, but the **shape tells you what to do with it**, in every chapter:
+
+<div class="table-scroll">
+
+| Shape | What it wants |
+|---|---|
+| A diamond paddle with a star | **Hit it** with the pencil (or a headbutt). |
+| An oval plate with boot prints | **Stand on it** (or put a crate on it). |
+| A box with a handle | **Carry it.** |
+| An hourglass | **Wait.** It shows how long is left. |
+| A lever on a gear | **Hit it to flip it.** The handle points up-left or down-right. |
+| A trapezoid with a down arrow | **Stomp it.** |
+
+</div>
+
+Clues are drawn bold on quiet paper so they read from a distance: **tally marks** over buttons give their order,
+a bold **blue line** joins the dots as you link them, and spot-the-difference panels use four simple pictures (a sun, a house, a
+tree, a cloud) with exactly one of them changed.
