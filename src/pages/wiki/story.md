@@ -14,7 +14,7 @@ leads the Eraser Aristocracy, and he believes that *a blank page is a perfect pa
 So he stole the Last Pencil, so that nothing will ever be drawn again.
 
 Following along, and not helping, is **the Narrator**: sarcastic, theatrical and unreliable. He mocks Noggin's every
-move. Whether he's secretly rooting for him is a matter for chapter 10.
+move. Whether he's secretly rooting for him is a matter for the final chapter.
 
 ## Along the way
 

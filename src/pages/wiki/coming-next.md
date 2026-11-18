@@ -4,7 +4,7 @@ title: Coming next
 description: What's being built for Sketchy Business next - six new chapters, six protector bosses, and the Ultimate Pencil.
 ---
 
-> **The first one is out.** The Crayon Kiln (chapter 10) is in the current download (v1.1.3): see the
+> **The first one is out.** The Crayon Kiln (chapter 10) is in the current download: see the
 > [chapters page](/wiki/chapters) and Wick in the [boss guide](/wiki/bosses#wick). The other five are being made now
 > and arrive in free updates; each gets its full wiki page the day it's out.
 

@@ -16,7 +16,7 @@ Any Xbox-style controller works; button names below are Xbox ones.
 | Swing the pencil / headbutt | <kbd>J</kbd> / <kbd>C</kbd> / left-click | <kbd>X</kbd> |
 | Roll | <kbd>X</kbd> / <kbd>L</kbd> | <kbd>B</kbd> |
 | Dodge (roll with no direction held) | <kbd>X</kbd> / <kbd>L</kbd> | <kbd>B</kbd> |
-| Dash (1.5 s cooldown) | <kbd>Shift</kbd> / right-click | <kbd>RB</kbd> |
+| Dash (short cooldown) | <kbd>Shift</kbd> / right-click | <kbd>RB</kbd> |
 | Slide | Down while running | D-pad down |
 | Crouch / squat-walk | Hold down, then move | Hold D-pad down, then move |
 | Drop through a plank | Down + Jump | Down + <kbd>A</kbd> |

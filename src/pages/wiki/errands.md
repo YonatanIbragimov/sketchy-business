@@ -1,18 +1,24 @@
 ---
 layout: ../../layouts/Wiki.astro
 title: Errands
-description: The locked gates in every level of Sketchy Business, the five kinds of errand, and the story they tell.
+description: "The errands in Sketchy Business: the few that lock the way, the side errands, the five kinds, and the story they tell."
 ---
 
-Every level has one or two **errands**: a gate with a padlock on it, and somebody standing beside it who needs a
-favour before it opens. Walk up and they'll tell you what they need. Do it, and they'll tell you a bit more of the
-story, and the gate swings open. There are 77 of them across the eleven chapters.
+Every level has one or two **errands**: somebody who needs a favour, and a room to do it in. There are 77 of them
+across the eleven chapters, and two sorts:
+
+- **Locked-gate errands** (17 of them): the way on really is shut, a gate with a padlock, and the favour opens it.
+  You'll always know: whoever's standing there tells you the gate's locked, and the game stops to let them say so.
+- **Side errands** (the other 60): no gate. They call out what they need as you walk past, and you can do it or
+  carry on. Do it anyway and they'll tell you a bit more of the story, and everyone's **hearts get topped right up**.
+  The errand waits for you if you walk on, so you can come back for it.
 
 > "An errand. Someone wants something fetched. Welcome to adventuring: ninety percent errands, ten percent falling."
 > *The Narrator*
 
-There's always a checkpoint at the door of an errand room, and what you're after shows at the bottom of the screen
-("Three fuses 1/3").
+There's always a checkpoint at the door of a locked-gate errand, and what you're after shows at the bottom of the
+screen ("Three fuses 1/3", or "(optional)" for a side errand while you're near it). Carry a side errand's item too
+far from its room and you'll put it down: it goes home and waits.
 
 ## The five kinds
 
@@ -21,10 +27,10 @@ There's always a checkpoint at the door of an errand room, and what you're after
 | Errand | What you do | A nudge |
 |---|---|---|
 | **Fetch** | Find one thing and carry it back to whoever asked. It bobs over your head while you carry it. | Some things are **heavy**: no double jump and no dash while you carry them, so look for the way back that doesn't need either. If you fall, it goes back where you found it. |
-| **Gather** | Collect every piece scattered around the room. | Count the lamps over the gate. The last piece is usually the high one. |
+| **Gather** | Collect every piece scattered around the room. | Count the lamps. The last piece is usually the high one. |
 | **Rescue** | Someone's locked in a scribbled cage. Hit every padlock (swing the pencil or stomp on it). | Padlocks can be up on ledges; the cage bursts when the last one goes. |
-| **Levers** | Throw every lever in the room. | Just walk into them. The gate has a lamp for each lever. |
-| **Ambush** | The gate stays shut until every minion is gone, and they come in waves. | Don't relax after the first wave: there's another one. Keep moving. |
+| **Levers** | Throw every lever in the room. | Just walk into them. There's a lamp for each lever. |
+| **Ambush** | Beat every minion; they come in waves. On a locked-gate errand the gate stays shut until they're all gone. | Don't relax after the first wave: there's another one. Keep moving. |
 
 </div>
 

@@ -24,7 +24,8 @@ In `%APPDATA%\Graphite\Sketchy Business` (paste that into File Explorer's addres
 and `settings.json` your settings. Updating or uninstalling the game never touches this folder.
 
 **How do I start over?**
-Delete `save.json` from that folder (with the game closed).
+Pick **New game** on the main menu: it starts again from chapter 1 (chapters you've unlocked stay in the Chapters
+list). To wipe everything instead, close the game and delete `save.json` from that folder.
 
 **How does saving work?**
 Every flag and every boss arena saves automatically. Pause → **Save & quit** saves and goes back to the menu.

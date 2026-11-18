@@ -29,14 +29,14 @@ Noggin's body took about three seconds to draw, but it does a surprising amount.
   @media (prefers-reduced-motion: reduce) { .crawl { animation: none; } }
 </style>
 - **Roll.** A quick roll in the direction you're going.
-- **Dash.** A burst of speed on the ground or in the air, then a 1.5 second cooldown.
+- **Dash.** A burst of speed on the ground or in the air, then a short cooldown (under half a second; one air dash until you land).
 - **Drop through.** Down + Jump on a thin plank drops you through it.
 
 ## Fighting
 
 - **Headbutt** (chapters 1 to 3). Same button as the swing, with a short lunge. It only hurts a mini-boss while the boss
   is stunned.
-- **Swing the Last Pencil** (from chapter 4).
+- **Swing the Last Pencil** (from chapter 5: you win it back at the end of chapter 4).
 - **Stomp.** Land on a minion's head. Works the whole game.
 - **Dodge.** Press roll with no direction held: Noggin ducks and steps back, and hits pass straight through him. Great
   against lance thrusts and charges.
