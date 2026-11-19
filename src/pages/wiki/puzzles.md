@@ -21,7 +21,7 @@ solved. There are 69 of them across the game. Here's every kind, with a nudge ra
 | Buttons in order | Marks over each button. | "The picture's the order. Probably." |
 | Combination lock | Dials you hit to turn, 0 to 9. | The code is written somewhere earlier in the level. |
 | Connect the dots | Dots that fade if you're slow. | Touch them in order, quickly. |
-| Bell memory | Bells ring a tune. Each bell has its own shape (triangle, square, circle, diamond). | Ring it back. It gets longer. |
+| Bell memory | Bells ring a tune. Each bell has its own shape (triangle, square, circle, diamond). | Ring it back: land on a bell or swing at it (just walking across doesn't count). A bell lights up while you stand on it. It gets longer. |
 | Shell game | Three cups, one key, lots of shuffling. | The right cup has a bent rim. |
 | Tic-tac-toe | Nine buttons, against the Smudgelings. | You don't have to win. A draw is enough. |
 | Riddle gates | Three doors and a riddle. Stand at one and press up. | Read the riddle twice. |

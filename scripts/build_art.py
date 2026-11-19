@@ -34,17 +34,21 @@ for extra in ["pink_walk", "scrunch_walk", "reginald_walk", "reginald_attack", "
               "compass_walk", "nub_walk", "gearsley_walk", "margin_walk", "mayor_walk"]:
     CAST[extra] = (f"cast/{extra}.json", None)
 
-# source sheets drawn with the head on: art_src/<path>, cols x rows, fps
-SHEETS = {  # Noggin's 16-frame redraw (Nov 2026), at the rates the game plays them
-    "noggin_idle": ("noggin/noggin__idle__4x8__16fps.png", 4, 8, 16),
-    "noggin_run": ("noggin/noggin__run__4x4__36fps.png", 4, 4, 36),
-    "noggin_jump": ("noggin/noggin__double_jump__4x4__38fps.png", 4, 4, 38),
-    "noggin_slash": ("noggin/noggin__slash__4x4__62fps.png", 4, 4, 54),
-    "noggin_crawl": ("noggin/noggin__crawl__4x4__24fps.png", 4, 4, 24),
-}
-STILLS = {
-    "noggin": "art_src/noggin/noggin__reference.png",
-    "penny": "art_src/penny/player2__reference.png",
+# source sheets drawn with the head on: path under the game folder, cols x rows, fps, keep every Nth frame
+# (the new Noggin and Penny design, Nov 2026; 64-frame clips are halved so a strip stays under WebP's width limit)
+NEW = "art_inbox/new_hero_design"
+SHEETS = {}
+for who in ("noggin", "penny"):
+    SHEETS.update({
+        f"{who}_idle": (f"{NEW}/core_three/final/256/{who}__idle__8x8__32fps.png", 8, 8, 32, 2),
+        f"{who}_run": (f"{NEW}/core_three/final/256/{who}__run__8x8__96fps.png", 8, 8, 96, 2),
+        f"{who}_jump": (f"{NEW}/combat_expressive/final/256/{who}__double_jump__8x8__128fps.png", 8, 8, 128, 2),
+        f"{who}_slash": (f"{NEW}/combat_expressive/final/256/{who}__slash__8x8__160fps.png", 8, 8, 160, 2),
+        f"{who}_crawl": (f"{NEW}/low_three/final/256/{who}__crawl__8x8__48fps.png", 8, 8, 48, 2),
+    })
+STILLS = {  # (sheet, frame): the first idle frame, at full resolution
+    "noggin": (f"{NEW}/core_three/final/512/noggin__idle__8x8__32fps.png", 8, 8),
+    "penny": (f"{NEW}/core_three/final/512/penny__idle__8x8__32fps.png", 8, 8),
 }
 
 
@@ -87,7 +91,7 @@ def from_game_sheet(rel, clip):
 
 
 def from_src_sheet(rel, cols, rows):
-    img = Image.open(GAME / "art_src" / rel).convert("RGBA")
+    img = Image.open(GAME / rel).convert("RGBA")
     fw, fh = img.width // cols, img.height // rows
     return [img.crop((c * fw, r * fh, (c + 1) * fw, (r + 1) * fh)) for r in range(rows) for c in range(cols)]
 
@@ -102,11 +106,11 @@ def main():
         frames, fps = from_game_sheet(rel, clip)
         if (r := strip(frames, fps, name)):
             out[name] = r
-    for name, (rel, c, r, fps) in SHEETS.items():
-        if (GAME / "art_src" / rel).exists() and (s := strip(from_src_sheet(rel, c, r), fps, name)):
+    for name, (rel, c, r, fps, step) in SHEETS.items():
+        if (GAME / rel).exists() and (s := strip(from_src_sheet(rel, c, r)[::step], fps / step, name)):
             out[name] = s
-    for name, rel in STILLS.items():
-        im = Image.open(GAME / rel).convert("RGBA")
+    for name, (rel, c, r) in STILLS.items():
+        im = from_src_sheet(rel, c, r)[0]
         im = im.crop(im.getchannel("A").getbbox())
         k = 640 / im.height
         im.resize((round(im.width * k), 640), Image.LANCZOS).save(OUT / f"{name}.webp", "WEBP", quality=90, method=6)

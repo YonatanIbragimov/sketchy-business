@@ -5,7 +5,7 @@ description: The story of Sketchy Business, the Last Pencil and Lord Smudge.
 ---
 
 In the margin of a sketchbook, a bored Artist drew a doodle. They spent ages on the head and about three seconds on the
-body. His name is **Noggin**. He says nothing, he is quietly brave, and his googly eyes do all the acting.
+body. His name is **Noggin**. He says nothing, he is quietly brave, and his face does all the acting.
 
 The sketchbook has one treasure: the **Last Pencil**, the only thing in the book that can draw something new. And it has
 one menace: **Lord Smudge**, a pompous pink eraser with a monocle, a tiny gold crown and a magnificent moustache. He

@@ -19,11 +19,11 @@ export const cast: Member[] = [
   {
     id: "noggin", name: "Noggin", sprite: "noggin_idle", alt: "noggin_run", role: "hero",
     tagline: "A doodle with an unreasonably large head.",
-    about: "Drawn in the margin of a sketchbook by a bored Artist, who spent ages on the head and about three seconds on the body. Noggin says nothing and is quietly brave. His googly eyes do all the acting.",
+    about: "Drawn in the margin of a sketchbook by a bored Artist, who spent ages on the head and about three seconds on the body. Noggin says nothing and is quietly brave. His face does all the acting: over twenty hand-drawn expressions, and one very handsome one.",
     tips: "Headbutts until he gets the Last Pencil back, then swings it like a sword. Jump on minions' heads too: it's rude, but it works.",
   },
   {
-    id: "penny", name: "Penny", sprite: "penny_still", role: "hero",
+    id: "penny", name: "Penny", sprite: "penny_idle", alt: "penny_run", role: "hero",
     tagline: "Player 2. A ballpoint pen, and she never stops talking.",
     about: "A ballpoint-pen girl from across the gutter (the fold down the middle of the book). Where Noggin is silent, Penny is bossy, sure of herself and a planner. Ink can't be erased: she's the one thing Smudge has never managed to rub out (\"He rubbed at my arm for an hour once. I just sat there. He cried a bit\").",
     tips: "Plug in a second controller and pick Players: 2. Stand on each other's heads, then jump off one for the team jump.",

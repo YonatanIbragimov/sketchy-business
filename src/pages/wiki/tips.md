@@ -38,4 +38,5 @@ description: Tips for Sketchy Business, from shavings to minions to the Narrator
 
 - Clean Slate Keep has a Hall of Portraits. Every single picture is of Lord Smudge. He's very consistent.
 - Somebody drew a horse with five legs in the Paper Mountains. We don't talk about the horse.
+- Press <kbd>`</kbd> (the key under <kbd>Esc</kbd>) and Noggin pulls his most handsome face. It does nothing. It's very important.
 - Want to speedrun it? Settings → Gameplay → **Speedrun timer**.

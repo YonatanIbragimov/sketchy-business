@@ -394,50 +394,85 @@
  "noggin_idle": {
   "src": "/art/noggin_idle.webp",
   "frames": 32,
-  "fps": 16,
-  "w": 124,
+  "fps": 16.0,
+  "w": 126,
   "h": 220
  },
  "noggin_run": {
   "src": "/art/noggin_run.webp",
-  "frames": 16,
-  "fps": 36,
-  "w": 127,
+  "frames": 32,
+  "fps": 48.0,
+  "w": 132,
   "h": 220
  },
  "noggin_jump": {
   "src": "/art/noggin_jump.webp",
-  "frames": 16,
-  "fps": 38,
-  "w": 168,
+  "frames": 32,
+  "fps": 64.0,
+  "w": 215,
   "h": 220
  },
  "noggin_slash": {
   "src": "/art/noggin_slash.webp",
-  "frames": 16,
-  "fps": 54,
-  "w": 153,
+  "frames": 32,
+  "fps": 80.0,
+  "w": 199,
   "h": 220
  },
  "noggin_crawl": {
   "src": "/art/noggin_crawl.webp",
-  "frames": 16,
-  "fps": 24,
-  "w": 190,
+  "frames": 32,
+  "fps": 24.0,
+  "w": 142,
+  "h": 220
+ },
+ "penny_idle": {
+  "src": "/art/penny_idle.webp",
+  "frames": 32,
+  "fps": 16.0,
+  "w": 150,
+  "h": 220
+ },
+ "penny_run": {
+  "src": "/art/penny_run.webp",
+  "frames": 32,
+  "fps": 48.0,
+  "w": 166,
+  "h": 220
+ },
+ "penny_jump": {
+  "src": "/art/penny_jump.webp",
+  "frames": 32,
+  "fps": 64.0,
+  "w": 218,
+  "h": 220
+ },
+ "penny_slash": {
+  "src": "/art/penny_slash.webp",
+  "frames": 32,
+  "fps": 80.0,
+  "w": 227,
+  "h": 220
+ },
+ "penny_crawl": {
+  "src": "/art/penny_crawl.webp",
+  "frames": 32,
+  "fps": 24.0,
+  "w": 196,
   "h": 220
  },
  "noggin_still": {
   "src": "/art/noggin.webp",
   "frames": 1,
   "fps": 1,
-  "w": 588,
+  "w": 356,
   "h": 640
  },
  "penny_still": {
   "src": "/art/penny.webp",
   "frames": 1,
   "fps": 1,
-  "w": 588,
+  "w": 433,
   "h": 640
  }
 }
