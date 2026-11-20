@@ -5,7 +5,8 @@ description: Every kind of puzzle room in Sketchy Business, with hints that don'
 ---
 
 Every level has a room or two that needs thinking rather than jumping. The door ahead opens once the room is
-solved. There are 69 of them across the game. Here's every kind, with a nudge rather than an answer.
+solved. There are 69 of them across the game (two are optional side rooms with a reward instead of a locked door).
+Here's every kind, with a nudge rather than an answer.
 
 <div class="table-scroll">
 
@@ -33,6 +34,11 @@ solved. There are 69 of them across the game. Here's every kind, with a nudge ra
 | Page fold | "A dog-eared corner. Fold it." | Each flap folds in a different set of platforms. |
 | Mirror page | "That's you, the other way round." | You on one plate, your reflection on the other. |
 | The chase choice | Two buttons while the eraser closes in. | The wrong one crumbles. Read the labels. |
+| Hold the door (2-3) | A wall that's only open while its plate is held, and a **sketch stand**. | Stand still on the stand and it draws your next four seconds, then replays them as a pencil ghost. Somebody has to hold that plate. |
+| Climb yourself (3-2, optional) | A shelf of shavings far too high to jump to. | Your ghost is as tall as you are. Its head is solid. |
+| Ghost ink (7-2) | A gap too wide to jump, and a sketch stand. | Fall short on purpose. The ghost's path stays behind for a few seconds. |
+| The folded portrait (4-3, optional) | A page with three numbered creases. | Swing at a crease to fold the page; swing again to unfold. Only one fold makes steps. |
+| Small talk (8-2) | A shaft nothing crosses, and the Narrator watching. | Whatever he says lands as a plank. Get him talking: wait, hop at the edge, or fall in (that one makes him rant). |
 
 </div>
 

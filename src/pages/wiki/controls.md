@@ -48,6 +48,9 @@ however many controllers are plugged in. With no controllers at all, both player
 
 </div>
 
+Penny's controller buttons are her own: changing Noggin's doesn't change hers. The Penny page lists them (her dash is
+<kbd>RB</kbd>). When you share one keyboard, the keys she takes stop working for Noggin until she leaves.
+
 ## Settings worth knowing
 
 - **Assist mode** (Settings → Gameplay): 5 hearts instead of 3, the game runs a little slower, jumps are more
@@ -56,7 +59,8 @@ however many controllers are plugged in. With no controllers at all, both player
 - **Narrator text speed**: slow, normal or fast.
 - **Story scenes: Wait for Space** (Settings → Gameplay): story lines stay up until you press Space, so you can read
   at your own pace.
-- **Dialogue text size** (Settings → Gameplay): Normal, Large or Larger, for the Narrator's box and the errand card.
+- **Dialogue text size** (Settings → Gameplay): Normal, Large or Larger, for the Narrator's box, the errand card,
+  Recent lines and the notes on the controls page.
 - **Speedrun timer**: on or off.
 - **Hand-drawn wobble** (Settings → Video): how much the lines boil. Turn it down if it bothers you.
 - **Paper lines & grain** (Settings → Video): Full, Soft or Faint, for the ruled lines and paper texture behind

@@ -51,8 +51,8 @@ all game finally get a proper job too.
 
 ## Also on the way
 
-- **New puzzle rooms** that need real thinking, starting with a pencil **ghost** that replays your last few seconds:
-  have it hold a door, stand on its head, or walk the line your failed jump left behind. Some will lock the way;
-  others are optional rooms with a reward.
+- **More puzzle rooms that need real thinking.** The first five are out (a pencil ghost that replays you, a page that
+  folds, and the Narrator's own subtitles: see [puzzle rooms](/wiki/puzzles)); more are on the way to replace the
+  repeated ones.
 - New achievements for every new chapter.
 - New errand characters with their own stories in every level.
