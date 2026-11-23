@@ -54,9 +54,10 @@ Thirteen errands send you down a hole, and there's a lot down there. Each one is
 2. **The Climb.** Parkour over a floor of spikes: planks, a plank that crumbles under you, a platform that ferries you
    across, and a pillar with a saw running over it.
 3. **The Doors.** Three locked doors, three ways to open them: a button up on a high ledge, a crate shoved onto a
-   pressure plate, and a timed button you have to race. Then the **warden's hall**: a giant eraser and its guards.
-   The door out stays shut until they're all beaten.
-4. **The treasure room.** What you came for, and at the far wall a **vent** whose draught blows you all the way back
+   pressure plate, and a timed button you have to race. Then the **warden's hall**: the **Warden**, a big grumpy
+   old eraser with a ring of keys, and its guards. When it stops and winds up, get out of the way: it lunges and slams
+   the floor. The door out stays shut until they're all beaten.
+4. **The treasure room.** What you came for, on a little pedestal over a pile of loot, and at the far wall a **vent** whose draught blows you all the way back
    up to whoever asked. Grab the lip at the top and climb out.
 
 Every floor has its own checkpoint, so dying down there only sends you back to the start of that floor. On a gather,
