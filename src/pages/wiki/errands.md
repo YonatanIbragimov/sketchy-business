@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/Wiki.astro
 title: Errands
-description: "The errands in Sketchy Business: the few that lock the way, the side errands, the five kinds, and the story they tell."
+description: "The errands in Sketchy Business: the few that lock the way, the side errands, the five kinds, the dungeons under them, and the story they tell."
 ---
 
 Every level has one or two **errands**: somebody who needs a favour, and a room to do it in. There are 77 of them
@@ -41,14 +41,36 @@ Errand rooms come in a few shapes, so they're never just a flat corridor:
 
 - **Tiers**: ledges stacked up the room. The thing you want is near the top.
 - **Tower**: a spring up to a loft, and a high perch above that.
-- **Cellar**: the floor drops into a pit with spikes at the bottom, ledges on the way down, and a spring to bounce back out.
 - **Arena**: open ground for the ambushes.
+- **The depths**: the errands that go *down* are whole dungeons (see below).
+
+## The depths
+
+Thirteen errands send you down a hole, and there's a lot down there. Each one is a dungeon three floors deep:
+
+1. **The Stacks.** You drop into a long hall with minions in it and a spiked pit with a crumbling plank across. Off to
+   one side a second hole drops into a **spike den**: a dead end, but there's usually something worth having on the
+   ledge in there. Getting back out takes a careful hop.
+2. **The Climb.** Parkour over a floor of spikes: planks, a plank that crumbles under you, a platform that ferries you
+   across, and a pillar with a saw running over it.
+3. **The Doors.** Three locked doors, three ways to open them: a button up on a high ledge, a crate shoved onto a
+   pressure plate, and a timed button you have to race. Then the **warden's hall**: a giant eraser and its guards.
+   The door out stays shut until they're all beaten.
+4. **The treasure room.** What you came for, and at the far wall a **vent** whose draught blows you all the way back
+   up to whoever asked. Grab the lip at the top and climb out.
+
+Every floor has its own checkpoint, so dying down there only sends you back to the start of that floor. On a gather,
+levers or padlock errand the pieces are spread over the floors, and some are in the dead ends. You can always go back
+down for one you missed.
+
+> "Some side passages go nowhere. Some go nowhere with spikes. A few have presents in."
+> *The Narrator*
 
 ## Tips
 
 - The gate won't let you jump over it, so don't try. Several of us have tried.
 - Carrying something heavy? Go round, not over. The way you came in usually works on the way back.
-- If you die mid-errand you start again from the checkpoint at the room's door. If you were carrying something, it
+- If you die mid-errand you start again from the last checkpoint (in the depths, the one on that floor). If you were carrying something, it
   goes back where you found it.
 
 ## Who asks
